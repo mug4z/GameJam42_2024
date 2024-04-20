@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cuf2linjho7gy"]
 
 [ext_resource type="Script" path="res://Src/Scripts/Player.gd" id="1_e52wl"]
-[ext_resource type="Texture2D" uid="uid://rh477241e3kb" path="res://Assets/player.png" id="2_m4u0c"]
+[ext_resource type="Texture2D" uid="uid://c1grifl4xj6x5" path="res://Assets/player_sprite-1.png.png" id="2_rpy67"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y0ucb"]
 radius = 27.0
@@ -23,7 +23,7 @@ position = Vector2(0.1, 54.86)
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(1, 1)
-texture = ExtResource("2_m4u0c")
+texture = ExtResource("2_rpy67")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(-2, -8.5)

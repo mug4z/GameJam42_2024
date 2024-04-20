@@ -1,6 +1,6 @@
 extends Button
 
-var game_scene = preload("res://Src/Scenes/Level_Test.tscn").instantiate()
+var game_scene = preload("res://Src/Scenes/Level.tscn").instantiate()
 
 func play_game():
 	get_tree().root.add_child(game_scene)
