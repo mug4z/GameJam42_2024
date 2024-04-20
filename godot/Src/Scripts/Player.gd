@@ -55,7 +55,7 @@ func fire(delta):
 		var new_flame = flame.instantiate()
 		new_flame.rotation = mouse_direction.angle()
 		new_flame.global_position = $FirePoint.global_position
-		new_flame.velocity = mouse_direction.rotated(deg_to_rad(randf_range(-spread, spread))) * fire_speed + velocity * fire_speed / 3
+		new_flame.velocity = mouse_direction.rotated(deg_to_rad(randf_range(-spread, spread))) * fire_speed + 2 * ( velocity * fire_speed / 3)
 		new_flame.lifespan = fire_duration
 		new_flame.fire_scale = Vector2(fire_scale, fire_scale)
 		add_sibling(new_flame)

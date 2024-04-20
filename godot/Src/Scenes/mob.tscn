@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4qftk3yybnm3"]
 
 [ext_resource type="Script" path="res://Src/Scenes/Mob.gd" id="1_qs4mk"]
-[ext_resource type="Texture2D" uid="uid://cwqxspkacc7tb" path="res://Assets/tree.png" id="2_2md25"]
+[ext_resource type="Texture2D" uid="uid://ds0gw7fywbs7q" path="res://Assets/Tree_original_big.png" id="2_bepfp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6elh3"]
 radius = 25.0
@@ -12,17 +12,18 @@ radius = 170.0
 
 [node name="Mob" type="Area2D"]
 z_index = 5
-collision_layer = 2
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_qs4mk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1, -96)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_2md25")
+position = Vector2(-2, -176)
+scale = Vector2(1.0401, 1.0401)
+texture = ExtResource("2_bepfp")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 0.5
+wait_time = 2.0
 autostart = true
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
