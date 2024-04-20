@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://b53poetoqailf"]
+[gd_scene load_steps=12 format=3 uid="uid://b53poetoqailf"]
 
 [ext_resource type="Texture2D" uid="uid://cgvd7t58e1if6" path="res://Assets/grass.png" id="1_jner3"]
 [ext_resource type="Script" path="res://Src/Scripts/Level_Test.gd" id="1_urc7d"]
+[ext_resource type="PackedScene" uid="uid://bi26bo7k041yx" path="res://Src/GUI/hud.tscn" id="2_vl3fc"]
 [ext_resource type="PackedScene" uid="uid://cuf2linjho7gy" path="res://Src/Actors/Player.tscn" id="2_vx6eg"]
 [ext_resource type="PackedScene" uid="uid://cnskw1l2xy6hy" path="res://Src/Actors/Tree.tscn" id="3_ma7gu"]
 [ext_resource type="AudioStream" uid="uid://dfgobekk7ci7w" path="res://Audio/8-bit-game-158815.mp3" id="4_gl6hm"]
@@ -13,6 +14,9 @@
 
 [node name="Level_Test" type="Node2D"]
 script = ExtResource("1_urc7d")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
 
 [node name="Grass" type="Sprite2D" parent="."]
 light_mask = 8
@@ -32,6 +36,10 @@ spread = 15
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.51, 1.51)
+
+[node name="HUD" parent="Player/Camera2D" instance=ExtResource("2_vl3fc")]
+z_index = 7
+position = Vector2(-537, -331)
 
 [node name="TREES" type="Node2D" parent="."]
 

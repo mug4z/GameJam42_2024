@@ -28,13 +28,6 @@ func _process(delta):
 	movement()
 	fire(delta)
 
-	xp += 10 * delta
-	if xp >= 100:
-		xp = 0
-		level += 1
-	update_xp.emit()
-	update_fuel.emit()
-
 func movement():
 	velocity = Vector2.ZERO
 	if(Input.is_action_pressed("move_left")):
@@ -62,6 +55,13 @@ func fire(delta):
 		fuel -= 1
 		update_fuel.emit()
 		attack_timer = 0
+		
+		xp += 10 * delta
+		if xp >= 100:
+			xp = 0
+			level += 1
+		update_xp.emit()
+		update_fuel.emit()
 	else:
 		attack_timer += delta
 	recharge_timer += delta
