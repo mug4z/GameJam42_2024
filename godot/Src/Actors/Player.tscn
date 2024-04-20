@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuf2linjho7gy"]
+
+[ext_resource type="Script" path="res://Src/Scripts/Player.gd" id="1_e52wl"]
+[ext_resource type="Texture2D" uid="uid://rh477241e3kb" path="res://Assets/player.png" id="2_m4u0c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y0ucb"]
+radius = 27.0
+height = 81.0
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(600, 300)
+script = ExtResource("1_e52wl")
+recharge_time = -0.34
+move_speed = 8
+attack_speed = -2.34
+fire_speed = 26
+fire_duration = 3
+spread = 17
+fire_scale = 1
+
+[node name="FirePoint" type="Node2D" parent="."]
+position = Vector2(0.1, 54.86)
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
+texture = ExtResource("2_m4u0c")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -8.5)
+shape = SubResource("CapsuleShape2D_y0ucb")

@@ -1,0 +1,348 @@
+[gd_scene load_steps=11 format=3 uid="uid://b53poetoqailf"]
+
+[ext_resource type="Texture2D" uid="uid://cgvd7t58e1if6" path="res://Assets/grass.png" id="1_jner3"]
+[ext_resource type="Script" path="res://Src/Scripts/Level_Test.gd" id="1_urc7d"]
+[ext_resource type="PackedScene" uid="uid://cuf2linjho7gy" path="res://Src/Actors/Player.tscn" id="2_vx6eg"]
+[ext_resource type="PackedScene" uid="uid://cnskw1l2xy6hy" path="res://Src/Actors/Tree.tscn" id="3_ma7gu"]
+[ext_resource type="AudioStream" uid="uid://dfgobekk7ci7w" path="res://Audio/8-bit-game-158815.mp3" id="4_gl6hm"]
+[ext_resource type="AudioStream" uid="uid://ch856s4fmye3g" path="res://Audio/8-bit-arcade-mode-158814.mp3" id="5_c3je2"]
+[ext_resource type="Script" path="res://Src/Scripts/Track1.gd" id="5_ywp43"]
+[ext_resource type="AudioStream" uid="uid://dhbjcddi554gl" path="res://Audio/8-bit-air-fight-158813.mp3" id="6_jdqci"]
+[ext_resource type="Script" path="res://Src/Scripts/Track2.gd" id="7_tbh4m"]
+[ext_resource type="Script" path="res://Src/Scripts/Track3.gd" id="9_cppea"]
+
+[node name="Level_Test" type="Node2D"]
+script = ExtResource("1_urc7d")
+
+[node name="Grass" type="Sprite2D" parent="."]
+light_mask = 8
+visibility_layer = 8
+position = Vector2(3.00003, 1.00006)
+scale = Vector2(10.0979, 14.4111)
+texture = ExtResource("1_jner3")
+
+[node name="Player" parent="." instance=ExtResource("2_vx6eg")]
+position = Vector2(576, 341)
+recharge_time = 0.5
+move_speed = 6
+attack_speed = 0.2
+fire_speed = 9
+fire_duration = 2
+spread = 15
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(1.51, 1.51)
+
+[node name="TREES" type="Node2D" parent="."]
+
+[node name="Tree" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(41, 553)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree2" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(606, -83)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree3" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(1486, 1039)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree4" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-433, -397)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree5" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-455, 1162)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree6" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(941, 407)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree7" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(618, 1149)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree8" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-783, -310)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree9" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-37, -122)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree10" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(1059, -541)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree11" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(1501, -278)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree12" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-349, -1378)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree13" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-669, 914)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree14" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-104, 278)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree15" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(776, 1400)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree16" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-1143, -36)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree17" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-1165, 1523)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree18" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(231, 768)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree19" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-92, 1510)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree20" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-1493, 51)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree21" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-747, 239)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree22" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(349, -180)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree23" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(791, 83)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree24" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-1059, -1017)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree25" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(683, -412)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree26" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(1248, -1048)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree27" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(2128, 74)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree28" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(209, -1362)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree29" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(187, 197)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree30" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(1583, -558)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree31" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(1260, 184)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree32" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-141, -1275)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree33" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(605, -1087)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree34" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(1701, -1506)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree35" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(2143, -1243)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree36" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(293, -2343)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree37" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(1905, 1623)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree38" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(2470, 987)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree39" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(3350, 2109)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree40" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(1431, 673)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree41" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(1409, 2232)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree42" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(2805, 1477)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree43" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(2482, 2219)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree44" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(1081, 760)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree45" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(1827, 948)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree46" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(2923, 529)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree47" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(3365, 792)
+scale = Vector2(1.09, 1.09)
+
+[node name="Tree48" parent="TREES" instance=ExtResource("3_ma7gu")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(1515, -308)
+scale = Vector2(1.09, 1.09)
+
+[node name="BackgroundMusic" type="Node2D" parent="."]
+
+[node name="Track1" type="AudioStreamPlayer2D" parent="BackgroundMusic"]
+stream = ExtResource("4_gl6hm")
+volume_db = 5.0
+autoplay = true
+attenuation = 1e-05
+script = ExtResource("5_ywp43")
+
+[node name="Track2" type="AudioStreamPlayer2D" parent="BackgroundMusic"]
+stream = ExtResource("5_c3je2")
+volume_db = 5.0
+script = ExtResource("7_tbh4m")
+
+[node name="Track3" type="AudioStreamPlayer2D" parent="BackgroundMusic"]
+stream = ExtResource("6_jdqci")
+volume_db = 5.0
+script = ExtResource("9_cppea")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="finished" from="BackgroundMusic/Track1" to="BackgroundMusic/Track1" method="_on_finished"]
+[connection signal="finished" from="BackgroundMusic/Track2" to="BackgroundMusic/Track2" method="_on_finished"]
+[connection signal="finished" from="BackgroundMusic/Track3" to="BackgroundMusic/Track3" method="_on_finished"]
