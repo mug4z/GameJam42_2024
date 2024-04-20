@@ -46,7 +46,7 @@ func set_rotation_to_mouse():
 func fire(delta):
 	if (Input.is_action_pressed("Fire") && fuel > 0 && attack_timer >= attack_speed):
 		var new_flame = flame.instantiate()
-		new_flame.rotation = mouse_direction.angle()
+		new_flame.rotation = mouse_direction.angle() + deg_to_rad(180)
 		new_flame.global_position = $FirePoint.global_position
 		new_flame.velocity = mouse_direction.rotated(deg_to_rad(randf_range(-spread, spread))) * fire_speed + 2 * ( velocity * fire_speed / 3)
 		new_flame.lifespan = fire_duration

@@ -7,7 +7,7 @@ var player
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player = get_node("../../../../Player")
-	value = 100
+	value = 0
 	player.update_xp.connect(update)
 
 func update():
