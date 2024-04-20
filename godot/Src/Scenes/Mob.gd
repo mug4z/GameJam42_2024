@@ -7,7 +7,7 @@ var center_position = Vector2(0,0)
 var immortal = 0
 @onready var area_check = $"propagate area"
 var density = 0
-var max_density = 5
+var max_density = 10
 
 func _init():
 	pass

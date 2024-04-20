@@ -8,6 +8,7 @@ radius = 27.0
 height = 81.0
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 4
 position = Vector2(600, 300)
 script = ExtResource("1_e52wl")
 recharge_time = -0.34
