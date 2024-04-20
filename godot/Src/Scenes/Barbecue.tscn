@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0x764ttwp484"]
 
-[ext_resource type="Texture2D" uid="uid://bmsretv3jlp6f" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_478pc"]
+[ext_resource type="Texture2D" uid="uid://dgvouvyhhijlk" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_478pc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7n8tc"]
 radius = 62.0081
@@ -92,8 +92,7 @@ shape = SubResource("CircleShape2D_7n8tc")
 [node name="Hitbox" type="StaticBody2D" parent="."]
 light_mask = 16
 visibility_layer = 16
-collision_layer = 16
-collision_mask = 13
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 light_mask = 16
