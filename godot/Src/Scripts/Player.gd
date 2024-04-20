@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var recharge_time = 0.2
 @export var move_speed = 3
 @export var attack_speed = 0.01
-@export var fire_speed = 10
+@export var fire_speed = 13
 @export var fire_duration = 2
 @export var spread = 10
 @export var fire_scale = 5
@@ -31,7 +31,7 @@ func movement():
 		velocity.y -= 1
 	if(Input.is_action_pressed("move_down")):
 		velocity.y += 1
-	position += velocity.normalized() * move_speed
+	move_and_collide(velocity.normalized() * move_speed)
 	
 func set_rotation_to_mouse():
 	rotation = mouse_direction.angle() + deg_to_rad(-90)
@@ -41,7 +41,7 @@ func fire(delta):
 		var new_flame = flame.instantiate()
 		new_flame.rotation = mouse_direction.angle()
 		new_flame.global_position = $FirePoint.global_position
-		new_flame.velocity = mouse_direction.rotated(deg_to_rad(randf_range(-spread, spread))) * fire_speed
+		new_flame.velocity = mouse_direction.rotated(deg_to_rad(randf_range(-spread, spread))) * fire_speed + velocity * fire_speed / 3
 		new_flame.lifespan = fire_duration
 		new_flame.fire_scale = Vector2(fire_scale, fire_scale)
 		add_sibling(new_flame)
