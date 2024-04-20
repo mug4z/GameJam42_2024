@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi26bo7k041yx"]
+
+[ext_resource type="PackedScene" uid="uid://dpa6wwwxsi7q3" path="res://Src/GUI/gas_tank_ui.tscn" id="1_5eb16"]
+[ext_resource type="PackedScene" uid="uid://ecxhkqv5kd2s" path="res://Src/GUI/level_progress_bar.tscn" id="2_jo6fh"]
+
+[node name="HUD" type="Node2D"]
+
+[node name="GasTankUI" parent="." instance=ExtResource("1_5eb16")]
+position = Vector2(-26, 1290)
+scale = Vector2(3.01361, 2.91236)
+
+[node name="LevelProgressBar" parent="." instance=ExtResource("2_jo6fh")]
+position = Vector2(5, 3)
+scale = Vector2(6.24465, 6.73871)

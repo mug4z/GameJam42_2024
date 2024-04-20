@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://cv16f54leb6w0"]
+[gd_scene load_steps=12 format=3 uid="uid://cv16f54leb6w0"]
 
 [ext_resource type="TileSet" uid="uid://b8gy3qgoaa85" path="res://Src/player_tile_set.tres" id="1_1ns12"]
-[ext_resource type="Texture2D" uid="uid://bmsretv3jlp6f" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="2_6k5bf"]
+[ext_resource type="Texture2D" uid="uid://i6n4p7cdwbya" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="2_6k5bf"]
 [ext_resource type="PackedScene" uid="uid://cuf2linjho7gy" path="res://Src/Actors/Player.tscn" id="4_c6r1m"]
+[ext_resource type="PackedScene" uid="uid://bi26bo7k041yx" path="res://Src/GUI/hud.tscn" id="4_w1jho"]
 [ext_resource type="PackedScene" uid="uid://cnskw1l2xy6hy" path="res://Src/Actors/Tree.tscn" id="5_rppnd"]
 [ext_resource type="AudioStream" uid="uid://dfgobekk7ci7w" path="res://Audio/8-bit-game-158815.mp3" id="6_m7ut3"]
 [ext_resource type="Script" path="res://Src/Scripts/Track1.gd" id="7_jrd1p"]
@@ -343,6 +344,12 @@ script = ExtResource("9_t1fwi")
 stream = ExtResource("10_3cato")
 volume_db = 5.0
 script = ExtResource("11_354ko")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("4_w1jho")]
+z_index = 3
+position = Vector2(-4, -2)
 
 [connection signal="finished" from="BackgroundMusic/Track1" to="BackgroundMusic/Track1" method="_on_finished"]
 [connection signal="finished" from="BackgroundMusic/Track2" to="BackgroundMusic/Track2" method="_on_finished"]

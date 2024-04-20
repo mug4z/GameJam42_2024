@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpa6wwwxsi7q3"]
+
+[ext_resource type="Script" path="res://Src/Scripts/GasTankProgressBar.gd" id="1_tjtae"]
+[ext_resource type="Texture2D" uid="uid://dtj2x0egxxc4k" path="res://healthbarUnder.png" id="1_ylm5b"]
+[ext_resource type="Texture2D" uid="uid://08sf2lfvikdu" path="res://healthbarProgress.png" id="2_3gjtc"]
+[ext_resource type="Texture2D" uid="uid://bkitbd1pl0a5f" path="res://sGaz2Merd.png" id="4_x2uge"]
+
+[node name="GasTankUI" type="Node2D"]
+
+[node name="GasTankProgressBar" type="TextureProgressBar" parent="."]
+offset_left = 36.0
+offset_top = 6.0
+offset_right = 101.0
+offset_bottom = 50.0
+scale = Vector2(3.67237, 3.85819)
+value = 50.0
+texture_under = ExtResource("1_ylm5b")
+texture_progress = ExtResource("2_3gjtc")
+script = ExtResource("1_tjtae")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(23, 23)
+rotation = -1.56677
+scale = Vector2(1.4021, 1.46146)
+texture = ExtResource("4_x2uge")

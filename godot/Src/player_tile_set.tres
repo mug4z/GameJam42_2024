@@ -1,9 +1,4 @@
-[gd_resource type="TileSet" load_steps=10 format=3 uid="uid://b8gy3qgoaa85"]
-
-[ext_resource type="Texture2D" uid="uid://bmsretv3jlp6f" path="res://sprites/DALLE_2024-04-20_00.52-1.png (2).png" id="1_5qh6x"]
-[ext_resource type="Texture2D" uid="uid://cas5ylox6apo1" path="res://sprites/sprite_flower-1.png.png" id="2_5m72a"]
-[ext_resource type="Texture2D" uid="uid://xkmqbispbbo" path="res://sprites/sprite_grass-1.png.png" id="3_spi6y"]
-[ext_resource type="Texture2D" uid="uid://cqktc6f3naloj" path="res://sprites/sprite_rock.png" id="4_xotc8"]
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://b8gy3qgoaa85"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xv7d2"]
 1:1/0 = 0
@@ -521,7 +516,6 @@
 3:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4t7kb"]
-texture = ExtResource("1_5qh6x")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 1:0/0 = 0
@@ -534,7 +528,6 @@ texture_region_size = Vector2i(128, 128)
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n8k2g"]
-texture = ExtResource("2_5m72a")
 margins = Vector2i(12, 28)
 separation = Vector2i(20, 0)
 texture_region_size = Vector2i(128, 128)
@@ -542,7 +535,6 @@ texture_region_size = Vector2i(128, 128)
 1:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2im8m"]
-texture = ExtResource("3_spi6y")
 margins = Vector2i(56, 8)
 separation = Vector2i(0, 8)
 texture_region_size = Vector2i(128, 128)
@@ -552,7 +544,6 @@ texture_region_size = Vector2i(128, 128)
 0:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ixdi"]
-texture = ExtResource("4_xotc8")
 margins = Vector2i(21, 24)
 separation = Vector2i(14, 0)
 texture_region_size = Vector2i(128, 128)

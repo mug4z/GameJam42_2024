@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@export var fuel = 20
+@export var max_fuel = 10
+@export var fuel = 10
 @export var recharge_time = 0.2
 @export var move_speed = 3
 @export var attack_speed = 0.05
@@ -11,6 +12,12 @@ extends CharacterBody2D
 
 var flame = preload("res://Src/Actors/Fireball.tscn")
 
+signal update_fuel # to emit signal on fuel quantity change. fuel UI recieves and auto updates
+signal update_xp # to emit signal on xp quantity change. xp UI recieves and auto updates
+
+var xp = 0
+var level = 1
+
 var attack_timer = 0
 var recharge_timer = 0
 var mouse_direction
@@ -20,7 +27,14 @@ func _process(delta):
 	set_rotation_to_mouse()
 	movement()
 	fire(delta)
-	
+
+	xp += 10 * delta
+	if xp >= 100:
+		xp = 0
+		level += 1
+	update_xp.emit()
+	update_fuel.emit()
+
 func movement():
 	velocity = Vector2.ZERO
 	if(Input.is_action_pressed("move_left")):
@@ -32,10 +46,10 @@ func movement():
 	if(Input.is_action_pressed("move_down")):
 		velocity.y += 1
 	position += velocity.normalized() * move_speed
-	
+
 func set_rotation_to_mouse():
 	rotation = mouse_direction.angle() + deg_to_rad(-90)
-	
+
 func fire(delta):
 	if (Input.is_action_pressed("Fire") && fuel > 0 && attack_timer >= attack_speed):
 		var new_flame = flame.instantiate()
@@ -46,10 +60,12 @@ func fire(delta):
 		new_flame.fire_scale = Vector2(fire_scale, fire_scale)
 		add_sibling(new_flame)
 		fuel -= 1
+		update_fuel.emit()
 		attack_timer = 0
 	else:
 		attack_timer += delta
 	recharge_timer += delta
-	if (recharge_timer >= recharge_time && fuel < 10):
+	if (recharge_timer >= recharge_time && fuel < max_fuel):
 		fuel += 1
+		update_fuel.emit()
 		recharge_timer = 0
