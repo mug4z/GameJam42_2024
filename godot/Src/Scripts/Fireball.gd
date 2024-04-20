@@ -19,6 +19,6 @@ func _process(delta):
 	if (timer >= lifespan):
 		free()
 
-func _on_body_entered(body):
-	queue_free()
-	body.queue_free()
+#func _on_body_entered(body):
+#	queue_free()
+#	body.queue_free()

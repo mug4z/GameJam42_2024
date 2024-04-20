@@ -1,4 +1,9 @@
-[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://b8gy3qgoaa85"]
+[gd_resource type="TileSet" load_steps=10 format=3 uid="uid://b8gy3qgoaa85"]
+
+[ext_resource type="Texture2D" uid="uid://bmsretv3jlp6f" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_5qh6x"]
+[ext_resource type="Texture2D" uid="uid://cas5ylox6apo1" path="res://Assets/sprite_flower-1.png.png" id="2_5m72a"]
+[ext_resource type="Texture2D" uid="uid://xkmqbispbbo" path="res://Assets/sprite_grass-1.png.png" id="3_spi6y"]
+[ext_resource type="Texture2D" uid="uid://cqktc6f3naloj" path="res://Assets/sprite_rock.png" id="4_xotc8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xv7d2"]
 1:1/0 = 0

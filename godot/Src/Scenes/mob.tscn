@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4qftk3yybnm3"]
+
+[ext_resource type="Script" path="res://Src/Scenes/Mob.gd" id="1_qs4mk"]
+[ext_resource type="Texture2D" uid="uid://cwqxspkacc7tb" path="res://Assets/tree.png" id="2_2md25"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6elh3"]
+radius = 25.0
+height = 164.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_un4v7"]
+radius = 170.0
+
+[node name="Mob" type="Area2D"]
+z_index = 5
+collision_layer = 2
+script = ExtResource("1_qs4mk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -96)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_2md25")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.5
+autostart = true
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -85)
+shape = SubResource("CapsuleShape2D_6elh3")
+
+[node name="propagate area" type="Area2D" parent="."]
+position = Vector2(1, -6)
+collision_layer = 512
+collision_mask = 512
+
+[node name="probox" type="CollisionShape2D" parent="propagate area"]
+y_sort_enabled = true
+position = Vector2(0, -80)
+shape = SubResource("CircleShape2D_un4v7")
+debug_color = Color(0.907255, 0.205736, 0.556261, 0.42)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="propagate area" to="." method="_on_propagate_area_area_entered"]
+[connection signal="body_entered" from="propagate area" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="propagate area" to="." method="_on_area_2d_body_exited"]
