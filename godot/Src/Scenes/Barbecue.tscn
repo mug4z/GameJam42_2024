@@ -1,0 +1,102 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0x764ttwp484"]
+
+[ext_resource type="Texture2D" uid="uid://bmsretv3jlp6f" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_478pc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7n8tc"]
+radius = 62.0081
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bm2xs"]
+radius = 172.003
+
+[node name="BBQ" type="Node2D"]
+light_mask = 16
+visibility_layer = 16
+
+[node name="Sprite" type="Sprite2D" parent="."]
+light_mask = 32
+visibility_layer = 32
+texture = ExtResource("1_478pc")
+
+[node name="NPC1" type="Area2D" parent="."]
+light_mask = 16
+visibility_layer = 16
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC1"]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(-144, 9)
+shape = SubResource("CircleShape2D_7n8tc")
+
+[node name="NPC2" type="Area2D" parent="."]
+light_mask = 16
+visibility_layer = 16
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC2"]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(-111, -97)
+shape = SubResource("CircleShape2D_7n8tc")
+
+[node name="NPC3" type="Area2D" parent="."]
+light_mask = 16
+visibility_layer = 16
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC3"]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(-2, -138)
+shape = SubResource("CircleShape2D_7n8tc")
+
+[node name="NPC4" type="Area2D" parent="."]
+light_mask = 16
+visibility_layer = 16
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC4"]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(109, -105)
+shape = SubResource("CircleShape2D_7n8tc")
+
+[node name="NPC5" type="Area2D" parent="."]
+light_mask = 16
+visibility_layer = 16
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC5"]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(151, 3)
+shape = SubResource("CircleShape2D_7n8tc")
+
+[node name="NPC6" type="Area2D" parent="."]
+light_mask = 16
+visibility_layer = 16
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC6"]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(118, 106)
+shape = SubResource("CircleShape2D_7n8tc")
+
+[node name="Hitbox" type="StaticBody2D" parent="."]
+light_mask = 16
+visibility_layer = 16
+collision_layer = 16
+collision_mask = 13
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(-1, 15)
+shape = SubResource("CircleShape2D_bm2xs")

@@ -22,7 +22,7 @@ texture = ExtResource("2_2md25")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 0.5
+wait_time = 3.0
 autostart = true
 
 [node name="hitbox" type="CollisionShape2D" parent="."]

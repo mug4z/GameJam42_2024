@@ -33,7 +33,7 @@ fire_duration = 2
 spread = 15
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(0.2, 0.2)
 
 [node name="TREES" type="Node2D" parent="."]
 visible = false
