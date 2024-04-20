@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
-@export var fuel = 20
+@export var fuel = 20000000
 @export var recharge_time = 0.2
 @export var move_speed = 3
-@export var attack_speed = 0.05
+@export var attack_speed = 0.01
 @export var fire_speed = 10
-@export var fire_duration = 1
+@export var fire_duration = 2
 @export var spread = 10
-@export var fire_scale = 2
+@export var fire_scale = 5
 
 var flame = preload("res://Src/Actors/Fireball.tscn")
 
