@@ -27,11 +27,9 @@ texture = ExtResource("1_jner3")
 
 [node name="Player" parent="." instance=ExtResource("2_vx6eg")]
 position = Vector2(576, 341)
-recharge_time = 0.5
 move_speed = 6
 attack_speed = 0.2
 fire_speed = 9
-fire_duration = 2
 spread = 15
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

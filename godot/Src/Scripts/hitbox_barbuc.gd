@@ -1,6 +1,5 @@
 extends Area2D
 
-var truc = preload("res://Src/Scenes/MenuGameOver.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,5 +12,5 @@ func _process(delta):
 
 
 func _on_area_entered(area):
-	truc.instantiate()
-	get_tree().change_scene_to_packed(truc)
+	print("barcue finitp")
+	pass # Replace with function body.

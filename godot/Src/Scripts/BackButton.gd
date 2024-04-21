@@ -1,4 +1,7 @@
 extends Button
 
+var menu = preload("res://Src/Scenes/MainMenu.tscn")
+
 func _on_pressed():
-	get_tree().root.remove_child(get_node("/root/CreditsMenu"))
+	menu.instantiate()
+	get_tree().change_scene_to_packed(menu)

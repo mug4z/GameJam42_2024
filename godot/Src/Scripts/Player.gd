@@ -37,6 +37,11 @@ var attack_timer = 0
 var recharge_timer = 0
 var mouse_direction
  
+func _init():
+	pass
+func _ready():
+	pass
+
 func _process(delta):
 	mouse_direction = global_position.direction_to(get_global_mouse_position())
 	set_rotation_to_mouse()

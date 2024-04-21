@@ -1,9 +1,7 @@
 extends Button
 
-var credits_scene = preload("res://Src/Scenes/CreditsMenu.tscn").instantiate()
-
-func go_to_credits():
-	get_tree().root.add_child(credits_scene)
+var credits = preload("res://Src/Scenes/CreditsMenu.tscn")
 
 func _on_pressed():
-	go_to_credits()
+	credits.instantiate()
+	get_tree().change_scene_to_packed(credits)

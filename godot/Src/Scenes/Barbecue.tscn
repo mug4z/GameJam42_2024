@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://b0x764ttwp484"]
 
-[ext_resource type="Texture2D" uid="uid://dgvouvyhhijlk" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_478pc"]
+[ext_resource type="Texture2D" uid="uid://dg5lcodoprk7a" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_478pc"]
 [ext_resource type="Script" path="res://Src/Scripts/Npc1.gd" id="2_uow0n"]
 [ext_resource type="Script" path="res://Src/Scripts/UpgradeLabel.gd" id="3_mn224"]
 [ext_resource type="Script" path="res://Src/Scripts/Npc2.gd" id="3_u1agl"]
@@ -108,7 +108,6 @@ light_mask = 16
 visibility_layer = 16
 position = Vector2(187, -181)
 rotation = 3.89831
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_6wq2d")
 
 [node name="NPC5" type="Area2D" parent="."]

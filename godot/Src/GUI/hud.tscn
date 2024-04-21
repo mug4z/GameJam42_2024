@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dpa6wwwxsi7q3" path="res://Src/GUI/gas_tank_ui.tscn" id="1_5eb16"]
 [ext_resource type="PackedScene" uid="uid://ecxhkqv5kd2s" path="res://Src/GUI/level_progress_bar.tscn" id="2_jo6fh"]
-[ext_resource type="PackedScene" uid="uid://dkq43xpn0bbbu" path="res://Src/GUI/timer_ui.tscn" id="3_kcgsp"]
+[ext_resource type="PackedScene" path="res://Src/GUI/timer_ui.tscn" id="3_kcgsp"]
 
 [node name="HUD" type="Node2D"]
 
