@@ -1,4 +1,4 @@
 extends Npc
 
 func Interact_action(player):
-	player.upgrade("spread")
+	player.upgrade("recharge_speed")
