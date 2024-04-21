@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cosunama10xg4"]
+[gd_scene load_steps=7 format=3 uid="uid://cosunama10xg4"]
 
 [ext_resource type="Script" path="res://Src/Scripts/Mob1.gd" id="1_0ljbd"]
-[ext_resource type="Texture2D" uid="uid://vp22842p2ygu" path="res://Assets/Mob/Flower_blue (2).png" id="2_lw5nc"]
+[ext_resource type="Texture2D" uid="uid://bw6krrl5g0x60" path="res://Assets/Mob/Flower_blue.png" id="2_fha43"]
+[ext_resource type="Script" path="res://Src/Scripts/Sprite_1.gd" id="3_4b1h5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6elh3"]
 radius = 38.0
@@ -47,11 +48,12 @@ script = ExtResource("1_0ljbd")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -92)
 scale = Vector2(1.6763, 1.6763)
-texture = ExtResource("2_lw5nc")
+texture = ExtResource("2_fha43")
+script = ExtResource("3_4b1h5")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 2.0
+wait_time = 5.0
 autostart = true
 
 [node name="hitbox" type="CollisionShape2D" parent="."]

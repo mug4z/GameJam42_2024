@@ -30,8 +30,8 @@ signal update_xp # to emit signal on xp quantity change. xp UI recieves and auto
 
 var xp = 0
 var level = 1
-var xp_to_next_level = 10
-var upgrade_points = 10
+var xp_to_next_level = 10 * level
+var upgrade_points = 0
 
 var attack_timer = 0
 var recharge_timer = 0
@@ -79,16 +79,28 @@ func fire(delta):
 		recharge_timer = 0
 
 func upgrade(stat):
-	upgrade_points -= 1;
-	if (stat == "recharge_speed"):
-		recharge_speed += recharge_speed_growth
-	if (stat == "move_speed"):
-		move_speed += move_speed_growth
-	if (stat == "attack_speed"):
-		attack_speed += attack_speed_growth
-	if (stat == "fire_speed"):
-		fire_speed += fire_speed_growth
-	if (stat == "spread"):
-		spread += spread_growth
-	if (stat == "fire_scale"):
-		fire_scale += fire_scale_growth
+	if upgrade_points > 0 :
+		upgrade_points -= 1;
+		if (stat == "recharge_speed"):
+			recharge_speed += recharge_speed_growth
+		if (stat == "move_speed"):
+			move_speed += move_speed_growth
+		if (stat == "attack_speed"):
+			attack_speed += attack_speed_growth
+		if (stat == "fire_speed"):
+			fire_speed += fire_speed_growth
+		if (stat == "spread"):
+			spread += spread_growth
+		if (stat == "fire_scale"):
+			fire_scale += fire_scale_growth
+
+func exp(exp):
+	update_xp.emit()
+	xp += exp
+	if xp >= xp_to_next_level:
+		level += 1
+		upgrade_points += 1
+		xp = 0
+
+func hit(bullet):
+	pass

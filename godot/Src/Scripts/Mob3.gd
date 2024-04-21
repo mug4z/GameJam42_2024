@@ -5,10 +5,15 @@ var mob_instance = [preload("res://Src/Actors/mob1.tscn"), preload("res://Src/Ac
 var center_position = Vector2(0,0)
 
 var immortal = 0
-@onready var area_check = $"propagate area"
 var density = 0
+
+@onready var area_check = $"propagate area"
 @export var max_density = 5
+@export var exp_point = 10
+@export var life = 3
+
 var Tier = 3
+
 func _init():
 	pass
 func _ready():
@@ -41,12 +46,12 @@ func _on_timer_timeout():
 
 
 
-func _on_area_entered(area):
-	#print("Touched  tier(",Tier,") immortal: ", immortal," density: ", density)
+func hit(bullet):
 	if (!immortal):
-		if area and area.is_queued_for_deletion() == false:
-			area.queue_free()
-		queue_free()
+		life -= 1
+		if life < 1:
+			bullet.gain_xp(exp_point)
+			queue_free()
 
 
 func _on_timer_2_timeout():

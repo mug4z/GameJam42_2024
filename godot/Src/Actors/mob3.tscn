@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwvrbuyn37oh5"]
+[gd_scene load_steps=8 format=3 uid="uid://dwvrbuyn37oh5"]
 
 [ext_resource type="Script" path="res://Src/Scripts/Mob3.gd" id="1_rm8g8"]
-[ext_resource type="Texture2D" uid="uid://dig7q43taqhjf" path="res://Assets/Tree_original_big.png" id="2_y8v70"]
+[ext_resource type="Texture2D" uid="uid://ckbpij8lvtk4k" path="res://Assets/Tree_original_big.png" id="2_y8v70"]
+[ext_resource type="Script" path="res://Src/Scripts/Sprite_3.gd" id="3_bur5a"]
 [ext_resource type="Script" path="res://Src/Scripts/Timer_3.gd" id="3_vu6ce"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6elh3"]
@@ -49,6 +50,7 @@ script = ExtResource("1_rm8g8")
 position = Vector2(-2, -176)
 scale = Vector2(1.0401, 1.0401)
 texture = ExtResource("2_y8v70")
+script = ExtResource("3_bur5a")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0

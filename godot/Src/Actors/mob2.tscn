@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://2bnfcfxxdb7s"]
+[gd_scene load_steps=7 format=3 uid="uid://2bnfcfxxdb7s"]
 
 [ext_resource type="Script" path="res://Src/Scripts/Mob2.gd" id="1_ii5bu"]
-[ext_resource type="Texture2D" uid="uid://drtds2012v82u" path="res://Assets/Mob/bush_pink.png" id="2_18xb6"]
+[ext_resource type="Texture2D" uid="uid://c64pujjodxc17" path="res://Assets/Mob/bush_pink.png" id="2_18xb6"]
+[ext_resource type="Script" path="res://Src/Scripts/Sprite_2.gd" id="3_blepa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6elh3"]
 radius = 68.0
@@ -48,6 +49,7 @@ script = ExtResource("1_ii5bu")
 position = Vector2(0, -92)
 scale = Vector2(1.6763, 1.6763)
 texture = ExtResource("2_18xb6")
+script = ExtResource("3_blepa")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
