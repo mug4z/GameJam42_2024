@@ -23,7 +23,8 @@ func _process(delta):
 func _on_area_entered(area):
 	if area and area.is_queued_for_deletion() == false:
 		area.hit(self)
-	queue_free()
+	if not area:
+		queue_free()
 func gain_xp(exp):
 	player.exp(exp)
 func hit(bullet):

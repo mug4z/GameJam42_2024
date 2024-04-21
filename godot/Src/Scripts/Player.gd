@@ -30,7 +30,7 @@ signal update_xp # to emit signal on xp quantity change. xp UI recieves and auto
 
 var xp = 0
 var level = 1
-var xp_to_next_level = 10 * level
+var xp_to_next_level = 10 * level * level
 var upgrade_points = 100
 
 var attack_timer = 0
@@ -98,7 +98,7 @@ func upgrade(stat):
 		if (stat == "recharge_speed"):
 			recharge_speed += recharge_speed_growth
 		if (stat == "move_speed"):
-			move_speed += move_speed_growth
+			move_speed += float(move_speed_growth) / float(move_speed * 0.9)
 		if (stat == "attack_speed"):
 			attack_speed += attack_speed_growth
 		if (stat == "fire_speed"):
@@ -106,7 +106,7 @@ func upgrade(stat):
 		if (stat == "spread"):
 			spread += spread_growth
 		if (stat == "fire_scale"):
-			fire_scale += fire_scale_growth
+			fire_scale += (fire_scale_growth * 0.10) / fire_scale
 
 func exp(exp):
 	update_xp.emit()

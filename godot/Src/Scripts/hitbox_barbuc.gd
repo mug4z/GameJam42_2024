@@ -13,5 +13,6 @@ func _process(delta):
 
 
 func _on_area_entered(area):
+	print("mort griller")
 	truc.instantiate()
 	get_tree().change_scene_to_packed(truc)

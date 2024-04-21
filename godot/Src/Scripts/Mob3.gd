@@ -11,7 +11,7 @@ var density = 0
 @export var max_density = 4
 @export var exp_point = 8
 @export var life = 3
-var base_distance = 600
+var base_distance = 400
 @onready var coo_player = $"../../Player"
 
 var Tier = 3
@@ -36,7 +36,7 @@ func propagate():
 		# Introduce randomness to the direction
 		var random_angle = deg_to_rad(randi_range(-90,90))  # Random angle between -22.5 to +22.5 degrees
 		direction = direction.rotated(random_angle)
-		var random_distance = base_distance * randf_range(0.5, 1.5)  # Randomize distance by 20%
+		var random_distance = base_distance * randf_range(0.5, 1.3)  # Randomize distance by 20%
 		if coo_player.global_position.distance_to(current_global_position + direction * random_distance) > 400:
 			new_sprite.global_position = current_global_position + direction * random_distance
 		else :
@@ -60,6 +60,6 @@ func hit(bullet):
 
 
 func _on_timer_2_timeout():
-	if base_distance < 1000:
+	if base_distance < 600:
 		base_distance += 10 # Base distance
 
