@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://Src/Scenes/spawner.gd" id="11_yngdr"]
 [ext_resource type="PackedScene" uid="uid://b0x764ttwp484" path="res://Src/Scenes/Barbecue.tscn" id="12_u1flu"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Level" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -30,15 +30,6 @@ layer_0/tile_data = PackedInt32Array(655360, 3, 2, 1245184, 3, 3, 524288, 3, 1, 
 [node name="Player" parent="." instance=ExtResource("4_c6r1m")]
 z_index = 3
 position = Vector2(576, 341)
-max_fuel = 100
-fuel = 100
-recharge_time = 0.401
-move_speed = 6
-attack_speed = -0.37
-fire_speed = 4
-fire_duration = 1
-spread = 15
-fire_scale = 4
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.2, 1.2)

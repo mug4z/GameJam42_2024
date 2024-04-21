@@ -12,14 +12,6 @@ z_index = 4
 position = Vector2(600, 300)
 collision_mask = 8
 script = ExtResource("1_e52wl")
-max_fuel = 1
-recharge_time = -0.34
-move_speed = 8
-attack_speed = -2.34
-fire_speed = 26
-fire_duration = 3
-spread = 17
-fire_scale = 1
 
 [node name="FirePoint" type="Node2D" parent="."]
 position = Vector2(0.1, 54.86)

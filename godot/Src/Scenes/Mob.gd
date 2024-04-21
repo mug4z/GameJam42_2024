@@ -19,9 +19,9 @@ func _ready():
 func _physics_process(_delta):
 	pass
 func propagate():
-	print("--------")
+	#print("--------")
 	if (density < max_density):
-		print("new tree")
+		#print("new tree")
 		var new_sprite = mob_instance.instantiate()
 		add_sibling(new_sprite)  # Adding as a sibling to maintain same parent
 		var current_global_position = global_position  # Use global position
