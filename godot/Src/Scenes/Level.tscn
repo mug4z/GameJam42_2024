@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://Src/Scripts/Track2.gd" id="9_t1fwi"]
 [ext_resource type="AudioStream" uid="uid://dhbjcddi554gl" path="res://Audio/8-bit-air-fight-158813.mp3" id="10_3cato"]
 [ext_resource type="Script" path="res://Src/Scripts/Track3.gd" id="11_354ko"]
-[ext_resource type="Script" path="res://Src/Scenes/spawner.gd" id="11_yngdr"]
+[ext_resource type="Script" path="res://Src/Scripts/spawner.gd" id="11_po0on"]
 [ext_resource type="PackedScene" uid="uid://b0x764ttwp484" path="res://Src/Scenes/Barbecue.tscn" id="12_u1flu"]
 
 [node name="Level" type="Node2D"]
@@ -331,22 +331,27 @@ scale = Vector2(1.09, 1.09)
 stream = ExtResource("6_m7ut3")
 volume_db = 5.0
 autoplay = true
-attenuation = 1e-05
+max_distance = 4420.0
+attenuation = 0.926836
 script = ExtResource("7_jrd1p")
 
 [node name="Track2" type="AudioStreamPlayer2D" parent="BackgroundMusic"]
 stream = ExtResource("8_pe6d3")
 volume_db = 5.0
+max_distance = 4420.0
+attenuation = 0.926
 script = ExtResource("9_t1fwi")
 
 [node name="Track3" type="AudioStreamPlayer2D" parent="BackgroundMusic"]
 position = Vector2(93, -187)
 stream = ExtResource("10_3cato")
 volume_db = 5.0
+max_distance = 4420.0
+attenuation = 0.926
 script = ExtResource("11_354ko")
 
 [node name="spwan" type="Node" parent="."]
-script = ExtResource("11_yngdr")
+script = ExtResource("11_po0on")
 
 [node name="BBQ" parent="." instance=ExtResource("12_u1flu")]
 z_index = 2

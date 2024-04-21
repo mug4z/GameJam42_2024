@@ -1,7 +1,9 @@
-extends Node
+extends Timer
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	wait_time = randf_range(0.8,2)
 	pass # Replace with function body.
 
 

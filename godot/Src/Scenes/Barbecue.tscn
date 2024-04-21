@@ -62,7 +62,7 @@ rotation = 0.0151572
 shape = SubResource("CapsuleShape2D_vp8bo")
 
 [node name="LabelPoint" type="Node2D" parent="NPC1"]
-position = Vector2(-157, 25)
+position = Vector2(-220, 46)
 
 [node name="NPC2" type="Area2D" parent="."]
 light_mask = 16
@@ -71,7 +71,7 @@ collision_layer = 0
 script = ExtResource("3_u1agl")
 
 [node name="LabelPoint" type="Node2D" parent="NPC2"]
-position = Vector2(-115, -89)
+position = Vector2(-238, -159)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC2"]
 position = Vector2(-175, -176)
@@ -85,7 +85,7 @@ collision_layer = 0
 script = ExtResource("4_wlbyh")
 
 [node name="LabelPoint" type="Node2D" parent="NPC3"]
-position = Vector2(-3, -119)
+position = Vector2(-9, -204)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC3"]
 light_mask = 16
@@ -101,7 +101,7 @@ collision_layer = 0
 script = ExtResource("5_xwq27")
 
 [node name="LabelPoint" type="Node2D" parent="NPC4"]
-position = Vector2(104, -88)
+position = Vector2(181, -115)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC4"]
 light_mask = 16
@@ -118,7 +118,7 @@ collision_layer = 0
 script = ExtResource("6_l4seu")
 
 [node name="LabelPoint" type="Node2D" parent="NPC5"]
-position = Vector2(167, 8)
+position = Vector2(191, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC5"]
 position = Vector2(264, -6)
@@ -132,7 +132,7 @@ collision_layer = 0
 script = ExtResource("7_wb0my")
 
 [node name="LabelPoint" type="Node2D" parent="NPC6"]
-position = Vector2(108, 117)
+position = Vector2(111, 114)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC6"]
 position = Vector2(174, 188)

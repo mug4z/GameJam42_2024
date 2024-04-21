@@ -63,21 +63,13 @@ func fire(delta):
 		var new_flame = flame.instantiate()
 		new_flame.rotation = mouse_direction.angle() + deg_to_rad(180)
 		new_flame.global_position = $FirePoint.global_position
-		new_flame.velocity = mouse_direction.rotated(deg_to_rad(randf_range(-spread, spread))) * fire_speed + 2 * ( velocity * fire_speed / 3)
+		new_flame.velocity = mouse_direction.rotated(deg_to_rad(randf_range(-spread, spread))) * fire_speed + (velocity * move_speed)
 		new_flame.lifespan = fire_duration
 		new_flame.fire_scale = Vector2(fire_scale, fire_scale)
 		add_sibling(new_flame)
 		fuel -= 1
 		update_fuel.emit()
 		attack_timer = 0
-		
-		#TO DELETE
-		xp += 10 * delta
-		if xp >= 100:
-			xp = 0
-			level += 1
-		update_xp.emit()
-		update_fuel.emit()
 	else:
 		attack_timer += delta
 	recharge_timer += delta
