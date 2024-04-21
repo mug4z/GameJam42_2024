@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://cuf2linjho7gy"]
 
 [ext_resource type="Script" path="res://Src/Scripts/Player.gd" id="1_e52wl"]
-[ext_resource type="Texture2D" uid="uid://b5c24rlixnvhv" path="res://Assets/player_sprite-1.png.png" id="2_rpy67"]
-[ext_resource type="AudioStream" uid="uid://dk75075q2paan" path="res://Audio/upgrade.mp3" id="3_fctws"]
-[ext_resource type="AudioStream" uid="uid://cfstbxpqpo8u0" path="res://Audio/flamethrower.mp3" id="4_sw1f5"]
+[ext_resource type="Texture2D" uid="uid://dgue8hwqxpkcc" path="res://Assets/player_sprite-1.png.png" id="2_rpy67"]
+[ext_resource type="AudioStream" uid="uid://cughpx4rvwdul" path="res://Audio/upgrade.mp3" id="3_fctws"]
+[ext_resource type="AudioStream" uid="uid://dgl6clh336v0w" path="res://Audio/flamethrower.mp3" id="4_sw1f5"]
 [ext_resource type="Script" path="res://Src/Scripts/player_hitbox.gd" id="5_fggmw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y0ucb"]
@@ -11,7 +11,7 @@ radius = 27.0
 height = 81.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gv62c"]
-radius = 65.0692
+radius = 34.0147
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 4
@@ -46,6 +46,7 @@ monitorable = false
 script = ExtResource("5_fggmw")
 
 [node name="Area2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, 0)
 shape = SubResource("CircleShape2D_gv62c")
 
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]

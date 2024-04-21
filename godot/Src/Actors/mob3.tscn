@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dwvrbuyn37oh5"]
 
 [ext_resource type="Script" path="res://Src/Scripts/Mob3.gd" id="1_rm8g8"]
-[ext_resource type="Texture2D" uid="uid://cvc4yua5115ow" path="res://Assets/Tree_original_big.png" id="2_y8v70"]
+[ext_resource type="Texture2D" uid="uid://c38x2vqwo1ct0" path="res://Assets/Tree_original_big.png" id="2_y8v70"]
 [ext_resource type="Script" path="res://Src/Scripts/Sprite_3.gd" id="3_bur5a"]
 [ext_resource type="Script" path="res://Src/Scripts/Timer_3.gd" id="3_vu6ce"]
 
@@ -76,6 +76,7 @@ shape = SubResource("CircleShape2D_un4v7")
 debug_color = Color(0.907255, 0.205736, 0.556261, 0.42)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_116ih")
 animation = &"T1_1"
 

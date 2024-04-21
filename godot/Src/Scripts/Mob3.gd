@@ -10,7 +10,7 @@ var density = 0
 @onready var area_check = $"propagate area"
 @export var max_density = 4
 @export var exp_point = 8
-@export var life = 3
+@export var life = 11
 var base_distance = 400
 @onready var coo_player = $"../../Player"
 

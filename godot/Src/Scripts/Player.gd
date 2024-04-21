@@ -1,16 +1,16 @@
 extends CharacterBody2D
 
-@export var max_fuel = 100
+@export var max_fuel = 70
 var fuel = max_fuel
 #var	fuel_growth = 5
 
-@export var recharge_speed = 0.5
+@export var recharge_speed = 1.7
 var recharge_speed_growth = 1
 
 @export var move_speed = 4
 var move_speed_growth = 1
 
-@export var attack_speed = 1
+@export var attack_speed = 7
 var attack_speed_growth = 0.5
 
 @export var fire_speed = 10
@@ -86,8 +86,9 @@ func fire(delta):
 		attack_timer += delta
 	recharge_timer += delta
 	if (recharge_timer >= (1.0/recharge_speed) && fuel < max_fuel):
-		fuel += 1
-		update_fuel.emit()
+		if(!Input.is_action_pressed("Fire")):
+			fuel += 1
+			update_fuel.emit()
 		recharge_timer = 0
 
 func upgrade(stat):
