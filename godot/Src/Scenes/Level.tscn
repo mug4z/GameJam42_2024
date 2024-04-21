@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cv16f54leb6w0"]
+[gd_scene load_steps=15 format=3 uid="uid://cv16f54leb6w0"]
 
 [ext_resource type="PackedScene" uid="uid://bi26bo7k041yx" path="res://Src/GUI/hud.tscn" id="1_jblu7"]
 [ext_resource type="TileSet" uid="uid://ctlmc7n8i6n56" path="res://Src/map_tile_set.tres" id="2_1pku4"]
@@ -10,14 +10,24 @@
 [ext_resource type="AudioStream" uid="uid://dhbjcddi554gl" path="res://Audio/8-bit-air-fight-158813.mp3" id="10_3cato"]
 [ext_resource type="Script" path="res://Src/Scripts/Track3.gd" id="11_354ko"]
 [ext_resource type="Script" path="res://Src/Scripts/spawner.gd" id="11_po0on"]
+[ext_resource type="Texture2D" uid="uid://bl7wpqx66a8yb" path="res://Assets/note2.png" id="12_h0c5c"]
 [ext_resource type="PackedScene" uid="uid://ccdkev3arec3e" path="res://Src/Actors/Barbecue.tscn" id="12_utles"]
+[ext_resource type="Texture2D" uid="uid://5esxi2bsa7ny" path="res://Assets/note1.png" id="13_8356b"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dvojj"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(16.43, 9.42, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+angular_velocity_min = -10.0
+angular_velocity_max = 10.0
+gravity = Vector3(10, -39.31, 0)
 
 [node name="Level" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("4_c6r1m")]
 z_index = 3
 position = Vector2(576, 341)
-move_speed = 4
 
 [node name="f" type="Camera2D" parent="Player"]
 
@@ -69,6 +79,24 @@ script = ExtResource("11_354ko")
 script = ExtResource("11_po0on")
 
 [node name="BBQ" parent="." instance=ExtResource("12_utles")]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(-508, -415)
+amount = 1
+amount_ratio = 0.8275
+process_material = SubResource("ParticleProcessMaterial_dvojj")
+texture = ExtResource("12_h0c5c")
+lifetime = 2.0
+randomness = 0.71
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+position = Vector2(-508, -415)
+amount = 1
+amount_ratio = 0.8275
+process_material = SubResource("ParticleProcessMaterial_dvojj")
+texture = ExtResource("13_8356b")
+lifetime = 2.0
+randomness = 0.71
 
 [connection signal="finished" from="BackgroundMusic/Track1" to="BackgroundMusic/Track1" method="_on_finished"]
 [connection signal="finished" from="BackgroundMusic/Track2" to="BackgroundMusic/Track2" method="_on_finished"]
