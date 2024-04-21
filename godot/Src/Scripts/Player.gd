@@ -31,7 +31,7 @@ signal update_xp # to emit signal on xp quantity change. xp UI recieves and auto
 var xp = 0
 var level = 1
 var xp_to_next_level = 10 * level
-var upgrade_points = 0
+var upgrade_points = 100
 
 var attack_timer = 0
 var recharge_timer = 0
@@ -75,7 +75,7 @@ func fire(delta):
 		var new_flame = flame.instantiate()
 		new_flame.rotation = mouse_direction.angle() + deg_to_rad(180)
 		new_flame.global_position = $FirePoint.global_position
-		new_flame.velocity = mouse_direction.rotated(deg_to_rad(randf_range(-spread, spread))) * fire_speed + (velocity * move_speed)
+		new_flame.velocity = mouse_direction.rotated(deg_to_rad(randf_range(-spread, spread))) * fire_speed + (velocity * move_speed) * 0.1
 		new_flame.lifespan = fire_duration
 		new_flame.fire_scale = Vector2(fire_scale, fire_scale)
 		add_sibling(new_flame)
