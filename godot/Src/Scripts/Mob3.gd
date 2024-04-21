@@ -8,9 +8,11 @@ var immortal = 0
 var density = 0
 
 @onready var area_check = $"propagate area"
-@export var max_density = 5
-@export var exp_point = 10
+@export var max_density = 4
+@export var exp_point = 8
 @export var life = 3
+var base_distance = 600
+@onready var coo_player = $"../../Player"
 
 var Tier = 3
 
@@ -34,9 +36,12 @@ func propagate():
 		# Introduce randomness to the direction
 		var random_angle = deg_to_rad(randi_range(-90,90))  # Random angle between -22.5 to +22.5 degrees
 		direction = direction.rotated(random_angle)
-		var base_distance = 600  # Base distance
 		var random_distance = base_distance * randf_range(0.5, 1.5)  # Randomize distance by 20%
-		new_sprite.global_position = current_global_position + direction * random_distance
+		if coo_player.global_position.distance_to(current_global_position + direction * random_distance) > 400:
+			new_sprite.global_position = current_global_position + direction * random_distance
+		else :
+			new_sprite.queue_free()
+		
 
 func _on_timer_timeout():
 	#print("test")
@@ -55,8 +60,6 @@ func hit(bullet):
 
 
 func _on_timer_2_timeout():
-	if Tier < 3:
-		var new_sprite = mob_instance[Tier].instantiate()
-		add_sibling(new_sprite)  # Adding as a sibling to maintain same parent
-		new_sprite.global_position = position
-		queue_free()
+	if base_distance < 1000:
+		base_distance += 10 # Base distance
+

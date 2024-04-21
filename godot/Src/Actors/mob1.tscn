@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cosunama10xg4"]
+[gd_scene load_steps=8 format=3 uid="uid://cosunama10xg4"]
 
 [ext_resource type="Script" path="res://Src/Scripts/Mob1.gd" id="1_0ljbd"]
-[ext_resource type="Texture2D" uid="uid://bw6krrl5g0x60" path="res://Assets/Mob/Flower_blue.png" id="2_fha43"]
+[ext_resource type="Texture2D" uid="uid://ch6p8vywhvj6m" path="res://Assets/Mob/Flower_blue.png" id="2_fha43"]
 [ext_resource type="Script" path="res://Src/Scripts/Sprite_1.gd" id="3_4b1h5"]
+[ext_resource type="Script" path="res://Src/Actors/timer_T1.gd" id="4_lixnx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6elh3"]
 radius = 38.0
@@ -78,11 +79,13 @@ animation = &"T1_1"
 
 [node name="Timer2" type="Timer" parent="."]
 process_callback = 0
-wait_time = 4.0
+wait_time = 10.0
 autostart = true
+script = ExtResource("4_lixnx")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="propagate area" to="." method="_on_propagate_area_area_entered"]
 [connection signal="body_entered" from="propagate area" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="propagate area" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Timer2" to="Timer2" method="_on_timeout"]

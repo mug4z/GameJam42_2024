@@ -2,7 +2,7 @@ extends Area2D
 
 var lifespan = 1
 var velocity = Vector2(10,0)
-var fire_scale = Vector2(1,1)
+var fire_scale = Vector2(1.0,1.0)
 var timer = 0
 @onready var player = $"../Player"
 

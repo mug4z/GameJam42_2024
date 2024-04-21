@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ctkfln0m3cfgh"]
 
-[ext_resource type="Texture2D" uid="uid://djn023ujjdw4d" path="res://Assets/DALLE_2024-04-21_06.52.34_-_Create_a_pixel_art_Game_Over_screen_for_a_game_showing_a_garden_overrun_with_wild_trees_and_vegetation_and_a_child_standing_looking_mildly_annoyed-ezgif.com-webp-to-png-converter.png" id="1_fhfo7"]
 [ext_resource type="Script" path="res://Src/Scripts/MenuGameOver.gd" id="1_hwuw1"]
-[ext_resource type="AudioStream" uid="uid://cq564072wlw2e" path="res://Audio/kl-peach-game-over-ii-135684.mp3" id="2_t3jgh"]
+[ext_resource type="Texture2D" uid="uid://bjy61olu3kcrc" path="res://Assets/end_screen.png" id="2_hsvjp"]
+[ext_resource type="AudioStream" uid="uid://d2mxuoert2ihb" path="res://Audio/kl-peach-game-over-ii-135684.mp3" id="2_t3jgh"]
 
 [node name="MenuGameOver" type="Control"]
 layout_mode = 3
@@ -12,7 +12,7 @@ script = ExtResource("1_hwuw1")
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(1280, 720)
 scale = Vector2(1.59204, 1.56863)
-texture = ExtResource("1_fhfo7")
+texture = ExtResource("2_hsvjp")
 
 [node name="RetryButton" type="Button" parent="."]
 layout_mode = 0

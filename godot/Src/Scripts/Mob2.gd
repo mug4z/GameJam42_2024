@@ -8,10 +8,10 @@ var immortal = 0
 var density = 0
 
 @onready var area_check = $"propagate area"
-@export var max_density = 5
-@export var exp_point = 5
+@export var max_density = 4
+@export var exp_point = 4
 @export var life = 2
-
+@onready var coo_player = $"../../Player"
 var Tier = 2
 
 func _init():
@@ -36,7 +36,10 @@ func propagate():
 		direction = direction.rotated(random_angle)
 		var base_distance = 300  # Base distance
 		var random_distance = base_distance * randf_range(0.8, 1.1)  # Randomize distance by 20%
-		new_sprite.global_position = current_global_position + direction * random_distance
+		if coo_player.global_position.distance_to(current_global_position + direction * random_distance) > 1000:
+			new_sprite.global_position = current_global_position + direction * random_distance
+		else :
+			new_sprite.queue_free()
 
 func _on_timer_timeout():
 	#print("test")
