@@ -59,6 +59,13 @@ func set_rotation_to_mouse():
 	rotation = mouse_direction.angle() + deg_to_rad(-90)
 
 func fire(delta):
+	if (Input.is_action_pressed("Fire")):
+		if  (fuel > 0):
+			if (!$BUUURN.playing):
+				$BUUURN.play()
+	else:
+		if ($BUUURN.playing):
+			$BUUURN.stop()
 	if (Input.is_action_pressed("Fire") && fuel > 0 && attack_timer >= (1.0/attack_speed)):
 		var new_flame = flame.instantiate()
 		new_flame.rotation = mouse_direction.angle() + deg_to_rad(180)
@@ -80,6 +87,7 @@ func fire(delta):
 
 func upgrade(stat):
 	if upgrade_points > 0 :
+		$UPGRADE.play()
 		upgrade_points -= 1;
 		if (stat == "recharge_speed"):
 			recharge_speed += recharge_speed_growth
