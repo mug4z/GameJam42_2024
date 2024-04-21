@@ -112,3 +112,5 @@ func exp(exp):
 
 func hit(bullet):
 	pass
+	
+	
