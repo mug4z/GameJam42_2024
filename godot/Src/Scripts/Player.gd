@@ -88,7 +88,8 @@ func fire(delta):
 func upgrade(stat):
 	if upgrade_points > 0 :
 		$UPGRADE.play()
-		upgrade_points -= 1;
+		upgrade_points -= 1
+		update_xp.emit()
 		if (stat == "recharge_speed"):
 			recharge_speed += recharge_speed_growth
 		if (stat == "move_speed"):

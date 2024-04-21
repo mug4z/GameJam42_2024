@@ -1,6 +1,7 @@
 extends TextureProgressBar
 
-@onready var label = $"../LevelLabel"
+@onready var level_label = $"../LevelLabel"
+@onready var points_label = $"../PointsLabel"
 
 var player
 
@@ -11,7 +12,8 @@ func _ready():
 	player.update_xp.connect(update)
 
 func update():
-	label.text = "LEVEL " + str(player.level)
+	level_label.text = "LEVEL " + str(player.level)
+	points_label.text = "PTS: " + str(player.upgrade_points)
 	value = float(player.xp) / float(player.xp_to_next_level) * 100
 	if value == 0:
 		value -= 25
