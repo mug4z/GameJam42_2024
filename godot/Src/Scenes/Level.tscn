@@ -17,6 +17,7 @@
 [node name="Player" parent="." instance=ExtResource("4_c6r1m")]
 z_index = 3
 position = Vector2(576, 341)
+move_speed = 4
 
 [node name="f" type="Camera2D" parent="Player"]
 

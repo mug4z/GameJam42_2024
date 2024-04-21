@@ -37,7 +37,7 @@ func propagate():
 		direction = direction.rotated(random_angle)
 		var base_distance = 300  # Base distance
 		var random_distance = base_distance * randf_range(0.8, 1.1)  # Randomize distance by 20%
-		if coo_player.global_position.distance_to(current_global_position + direction * random_distance) > 400:
+		if coo_player.global_position.distance_to(current_global_position + direction * random_distance) > 800:
 			new_sprite.global_position = current_global_position + direction * random_distance
 		else :
 			new_sprite.queue_free()

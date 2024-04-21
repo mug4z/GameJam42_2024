@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://cuf2linjho7gy"]
 
 [ext_resource type="Script" path="res://Src/Scripts/Player.gd" id="1_e52wl"]
-[ext_resource type="Texture2D" uid="uid://dcme1xglgd8yk" path="res://Assets/player_sprite-1.png.png" id="2_rpy67"]
-[ext_resource type="AudioStream" uid="uid://dmpmnwxcileuq" path="res://Audio/upgrade.mp3" id="3_fctws"]
-[ext_resource type="AudioStream" uid="uid://pyig4ens4my7" path="res://Audio/flamethrower.mp3" id="4_sw1f5"]
+[ext_resource type="Texture2D" uid="uid://b5c24rlixnvhv" path="res://Assets/player_sprite-1.png.png" id="2_rpy67"]
+[ext_resource type="AudioStream" uid="uid://dk75075q2paan" path="res://Audio/upgrade.mp3" id="3_fctws"]
+[ext_resource type="AudioStream" uid="uid://cfstbxpqpo8u0" path="res://Audio/flamethrower.mp3" id="4_sw1f5"]
 [ext_resource type="Script" path="res://Src/Scripts/player_hitbox.gd" id="5_fggmw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y0ucb"]

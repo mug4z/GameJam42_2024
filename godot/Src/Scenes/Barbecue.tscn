@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://b0x764ttwp484"]
 
-[ext_resource type="Texture2D" uid="uid://c5r7ph8yklp27" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_478pc"]
+[ext_resource type="Texture2D" uid="uid://buxn2oqt5ex0y" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_478pc"]
 [ext_resource type="Script" path="res://Src/Scripts/Npc1.gd" id="2_uow0n"]
 [ext_resource type="Script" path="res://Src/Scripts/UpgradeLabel.gd" id="3_mn224"]
 [ext_resource type="Script" path="res://Src/Scripts/Npc2.gd" id="3_u1agl"]
@@ -150,6 +150,7 @@ position = Vector2(-1, 15)
 shape = SubResource("CircleShape2D_bm2xs")
 
 [node name="UpgradeLabel" type="Label" parent="."]
+z_index = 4
 offset_left = -40.0
 offset_top = -341.0
 offset_right = 50.0
