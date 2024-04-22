@@ -102,9 +102,9 @@ func upgrade(stat):
 			move_speed += float(move_speed_growth) / float(move_speed * 0.3)
 		if (stat == "attack_speed"):
 			attack_speed += attack_speed_growth
+			max_fuel *= 1.10			
 		if (stat == "fire_speed"):
 			fire_speed += fire_speed_growth
-			max_fuel *= 1.10
 		if (stat == "spread"):
 			spread += spread_growth
 		if (stat == "fire_scale"):

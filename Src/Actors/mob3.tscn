@@ -1,13 +1,13 @@
 [gd_scene load_steps=8 format=3 uid="uid://dwvrbuyn37oh5"]
 
 [ext_resource type="Script" path="res://Src/Scripts/Mob3.gd" id="1_rm8g8"]
-[ext_resource type="Texture2D" uid="uid://dwf321wbs5nbt" path="res://Assets/Tree_original_big.png" id="2_y8v70"]
+[ext_resource type="Texture2D" uid="uid://bx6hi6oav1oug" path="res://Assets/Tree_original_big.png" id="2_y8v70"]
 [ext_resource type="Script" path="res://Src/Scripts/Sprite_3.gd" id="3_bur5a"]
 [ext_resource type="Script" path="res://Src/Scripts/Timer_3.gd" id="3_vu6ce"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6elh3"]
-radius = 32.0
-height = 150.0
+radius = 46.0
+height = 198.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_un4v7"]
 radius = 155.129
@@ -59,8 +59,7 @@ script = ExtResource("3_vu6ce")
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
-position = Vector2(0, 42)
-rotation = 1.5708
+position = Vector2(0, -26)
 shape = SubResource("CapsuleShape2D_6elh3")
 
 [node name="propagate area" type="Area2D" parent="."]
@@ -80,6 +79,6 @@ sprite_frames = SubResource("SpriteFrames_116ih")
 animation = &"T1_1"
 
 [node name="Timer2" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 5.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

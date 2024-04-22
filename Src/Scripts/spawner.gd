@@ -3,11 +3,11 @@ extends Node
 var mob_instance = preload("res://Src/Actors/mob3.tscn")
 var center_x = 0  # Center x-coordinate
 var center_y = 0  # Center y-coordinate
-var radius = 4000  # Radius of the circle
+var radius = 3900  # Radius of the circle
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var num_sprites = 40  # Number of sprites to place in a circle
+	var num_sprites = 30  # Number of sprites to place in a circle
 	for i in range(0, num_sprites):
 		var angle = 2 * PI * i / num_sprites  # Calculate the angle for each sprite
 		var new_sprite = mob_instance.instantiate()
