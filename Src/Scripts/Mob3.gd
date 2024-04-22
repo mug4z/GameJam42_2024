@@ -11,7 +11,7 @@ var density = 0
 @export var max_density = 4
 @export var exp_point = 8
 @export var life = 7
-var base_distance = 600
+var base_distance = 400
 @onready var coo_player = $"../../Player"
 
 var Tier = 3
