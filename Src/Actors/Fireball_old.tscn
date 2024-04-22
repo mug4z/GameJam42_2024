@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://cx8uctq52tehj"]
 
 [ext_resource type="Script" path="res://Src/Scripts/Fireball.gd" id="1_gr6lr"]
-[ext_resource type="Texture2D" uid="uid://bm28lnvdcmbov" path="res://Assets/Fireball/fireball_0.png" id="2_avt6v"]
-[ext_resource type="Texture2D" uid="uid://dpm4lo87wa1ms" path="res://Assets/Fireball/fireball_1.png" id="3_d5h65"]
-[ext_resource type="Texture2D" uid="uid://bhd0vkryasqqo" path="res://Assets/Fireball/fireball_2.png" id="4_7elsy"]
-[ext_resource type="Texture2D" uid="uid://bo2nigb63du2w" path="res://Assets/Fireball/fireball_3.png" id="5_pipnu"]
+[ext_resource type="Texture2D" uid="uid://cvey5yc53rw7w" path="res://Assets/Fireball/fireball_0.png" id="2_avt6v"]
+[ext_resource type="Texture2D" uid="uid://coo7lf7x43kj3" path="res://Assets/Fireball/fireball_1.png" id="3_d5h65"]
+[ext_resource type="Texture2D" uid="uid://8r24bdde56vb" path="res://Assets/Fireball/fireball_2.png" id="4_7elsy"]
+[ext_resource type="Texture2D" uid="uid://dcvuperokbwxy" path="res://Assets/Fireball/fireball_3.png" id="5_pipnu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mfv4p"]
 animations = [{
