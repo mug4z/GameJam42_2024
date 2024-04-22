@@ -21,11 +21,10 @@ func _process(delta):
 		free()
 
 func _on_area_entered(area):
-	if area and area.is_queued_for_deletion() == false:
-		area.hit(self)
-	if 5 < randi_range(0,100):
+	if area and area.is_queued_for_deletion() == false and area.hit(self):
+		print("freeingdeee")
 		queue_free()
 func gain_xp(exp):
 	player.exp(exp)
 func hit(bullet):
-	pass
+	return 0

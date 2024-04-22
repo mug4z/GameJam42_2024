@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://Src/Scripts/Fireball.gd" id="1_njwgj"]
 [ext_resource type="Texture2D" uid="uid://bm28lnvdcmbov" path="res://Assets/Fireball/fireball_0.png" id="2_kgeet"]
-[ext_resource type="Texture2D" uid="uid://jvmnb0p1oqy8" path="res://Assets/fire2.png" id="2_ruphc"]
+[ext_resource type="Texture2D" uid="uid://cbcgmbjw636jt" path="res://Assets/fire2.png" id="2_ruphc"]
 [ext_resource type="Texture2D" uid="uid://dpm4lo87wa1ms" path="res://Assets/Fireball/fireball_1.png" id="3_jfdx8"]
 [ext_resource type="Texture2D" uid="uid://bhd0vkryasqqo" path="res://Assets/Fireball/fireball_2.png" id="4_f287f"]
 [ext_resource type="Texture2D" uid="uid://bo2nigb63du2w" path="res://Assets/Fireball/fireball_3.png" id="5_ybrka"]
-[ext_resource type="AudioStream" uid="uid://d02utvj2sisec" path="res://Audio/firewoosh.mp3" id="7_xeqv1"]
+[ext_resource type="AudioStream" uid="uid://xggvbvmixib4" path="res://Audio/firewoosh.mp3" id="7_xeqv1"]
 
 [sub_resource type="Gradient" id="Gradient_caotm"]
 colors = PackedColorArray(0.815686, 0, 0, 0.784314, 1, 1, 1, 1)
@@ -56,7 +56,7 @@ radius = 11.0
 z_index = 3
 position = Vector2(245.71, 308)
 rotation = 3.14159
-collision_layer = 4
+collision_layer = 0
 collision_mask = 12
 script = ExtResource("1_njwgj")
 

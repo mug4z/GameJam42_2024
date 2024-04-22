@@ -62,4 +62,3 @@ func hit(bullet):
 func _on_timer_2_timeout():
 	if base_distance < 600:
 		base_distance += 10 # Base distance
-

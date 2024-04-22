@@ -7,7 +7,7 @@ var radius = 4000  # Radius of the circle
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var num_sprites = 30  # Number of sprites to place in a circle
+	var num_sprites = 40  # Number of sprites to place in a circle
 	for i in range(0, num_sprites):
 		var angle = 2 * PI * i / num_sprites  # Calculate the angle for each sprite
 		var new_sprite = mob_instance.instantiate()

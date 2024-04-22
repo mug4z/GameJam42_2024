@@ -10,11 +10,11 @@ var recharge_speed_growth = 1
 @export var move_speed = 8
 var move_speed_growth = 1
 
-@export var attack_speed = 7
-var attack_speed_growth = 0.5
+@export var attack_speed = 5
+var attack_speed_growth = 1
 
 @export var fire_speed = 10
-var fire_speed_growth = 2
+var fire_speed_growth = 1
 
 @export var fire_duration = 2
 @export var spread = 10
@@ -30,8 +30,8 @@ signal update_xp # to emit signal on xp quantity change. xp UI recieves and auto
 
 var xp = 0
 var level = 1
-var xp_to_next_level = 30 * level
-var upgrade_points = 10
+var xp_to_next_level = 15 * level
+var upgrade_points = 7
 
 var attack_timer = 0
 var recharge_timer = 0
@@ -87,7 +87,7 @@ func fire(delta):
 	recharge_timer += delta
 	if (recharge_timer >= (1.0/recharge_speed) && fuel < max_fuel):
 		if(!Input.is_action_pressed("Fire")):
-			fuel += 1
+			fuel += 1 + (float(fuel)/ float(max_fuel) * 3)
 			update_fuel.emit()
 		recharge_timer = 0
 
@@ -99,11 +99,12 @@ func upgrade(stat):
 		if (stat == "recharge_speed"):
 			recharge_speed += recharge_speed_growth
 		if (stat == "move_speed"):
-			move_speed += float(move_speed_growth) / float(move_speed * 0.9)
+			move_speed += float(move_speed_growth) / float(move_speed * 0.3)
 		if (stat == "attack_speed"):
 			attack_speed += attack_speed_growth
 		if (stat == "fire_speed"):
 			fire_speed += fire_speed_growth
+			max_fuel *= 1.10
 		if (stat == "spread"):
 			spread += spread_growth
 		if (stat == "fire_scale"):
