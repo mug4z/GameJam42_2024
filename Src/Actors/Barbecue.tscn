@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://ccdkev3arec3e"]
 
-[ext_resource type="Texture2D" uid="uid://ciopem4g0lox1" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_ixb24"]
+[ext_resource type="Texture2D" uid="uid://ba6amdc6p2d6o" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_ixb24"]
 [ext_resource type="Script" path="res://Src/Scripts/Npc1.gd" id="2_xb3ng"]
 [ext_resource type="Script" path="res://Src/Scripts/Npc2.gd" id="3_hkkpt"]
 [ext_resource type="Script" path="res://Src/Scripts/Npc3.gd" id="4_nkdh0"]
@@ -8,8 +8,8 @@
 [ext_resource type="Script" path="res://Src/Scripts/Npc5.gd" id="6_1wy5h"]
 [ext_resource type="Script" path="res://Src/Scripts/Npc6.gd" id="7_bd8nw"]
 [ext_resource type="Script" path="res://Src/Scripts/UpgradeLabel.gd" id="8_m2685"]
-[ext_resource type="Texture2D" uid="uid://cuwdio2igs2ve" path="res://Assets/spark.png" id="9_fq8qr"]
-[ext_resource type="AudioStream" uid="uid://bh08sdwyyxsdl" path="res://Audio/firecrackle.mp3" id="10_mnpl8"]
+[ext_resource type="Texture2D" uid="uid://bdijf6k6tixkp" path="res://Assets/spark.png" id="9_fq8qr"]
+[ext_resource type="AudioStream" uid="uid://baorpi2wrnshm" path="res://Audio/firecrackle.mp3" id="10_mnpl8"]
 [ext_resource type="Script" path="res://Src/Scripts/hitbox_barbuc.gd" id="11_t12g2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vp8bo"]
@@ -41,6 +41,10 @@ radius = 172.003
 
 [sub_resource type="LabelSettings" id="LabelSettings_5o1gc"]
 line_spacing = -5.0
+outline_size = 3
+outline_color = Color(0.0235294, 0.0235294, 0.0235294, 1)
+shadow_color = Color(0.0392157, 0.0235294, 0.054902, 1)
+shadow_offset = Vector2(-0.97, 2.7)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lh5x8"]
 lifetime_randomness = 0.1
@@ -92,7 +96,7 @@ rotation = 0.0151572
 shape = SubResource("CapsuleShape2D_vp8bo")
 
 [node name="LabelPoint" type="Node2D" parent="NPC1"]
-position = Vector2(-220, 46)
+position = Vector2(-134, 25)
 
 [node name="NPC2" type="Area2D" parent="."]
 light_mask = 16
@@ -101,7 +105,7 @@ collision_layer = 0
 script = ExtResource("3_hkkpt")
 
 [node name="LabelPoint" type="Node2D" parent="NPC2"]
-position = Vector2(-238, -159)
+position = Vector2(-109, -87)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC2"]
 position = Vector2(-175, -176)
@@ -115,7 +119,7 @@ collision_layer = 0
 script = ExtResource("4_nkdh0")
 
 [node name="LabelPoint" type="Node2D" parent="NPC3"]
-position = Vector2(-9, -204)
+position = Vector2(-1, -137)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC3"]
 light_mask = 16
@@ -131,7 +135,7 @@ collision_layer = 0
 script = ExtResource("5_3o3wq")
 
 [node name="LabelPoint" type="Node2D" parent="NPC4"]
-position = Vector2(181, -115)
+position = Vector2(101, -89)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC4"]
 light_mask = 16
@@ -147,7 +151,7 @@ collision_layer = 0
 script = ExtResource("6_1wy5h")
 
 [node name="LabelPoint" type="Node2D" parent="NPC5"]
-position = Vector2(191, 4)
+position = Vector2(131, 20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC5"]
 position = Vector2(264, -6)
@@ -161,7 +165,7 @@ collision_layer = 0
 script = ExtResource("7_bd8nw")
 
 [node name="LabelPoint" type="Node2D" parent="NPC6"]
-position = Vector2(111, 114)
+position = Vector2(102, 107)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC6"]
 position = Vector2(174, 188)
@@ -180,16 +184,19 @@ position = Vector2(-1, 15)
 shape = SubResource("CircleShape2D_bm2xs")
 
 [node name="UpgradeLabel" type="Label" parent="."]
-offset_left = -40.0
-offset_top = -341.0
-offset_right = 50.0
-offset_bottom = -292.0
+z_index = 14
+offset_left = -281.0
+offset_top = -325.0
+offset_right = -191.0
+offset_bottom = -276.0
 scale = Vector2(1.91, 1.91)
-pivot_offset = Vector2(46.34, 25.16)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 text = "Upgrade!
 [e]"
 label_settings = SubResource("LabelSettings_5o1gc")
 horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("8_m2685")
 
 [node name="MERGUEZ" type="GPUParticles2D" parent="."]

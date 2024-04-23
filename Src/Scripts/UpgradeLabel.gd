@@ -11,6 +11,12 @@ func _ready():
 
 func set_base_position(pos):
 	base_position = pos
+	my_set_offset()
+	
+func my_set_offset():
+	pivot_offset.x = size.x
+	pivot_offset.y = size.y
+
 
 func _process(delta):
 	absolute_time += delta

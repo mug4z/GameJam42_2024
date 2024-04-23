@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ctkfln0m3cfgh"]
 
 [ext_resource type="Script" path="res://Src/Scripts/MenuGameOver.gd" id="1_hwuw1"]
-[ext_resource type="Texture2D" uid="uid://d2s1lm4jg60xj" path="res://Assets/end_screen.png" id="2_hsvjp"]
-[ext_resource type="AudioStream" uid="uid://bpnx24g58wydj" path="res://Audio/kl-peach-game-over-ii-135684.mp3" id="2_t3jgh"]
+[ext_resource type="Texture2D" uid="uid://c3ryvqytfcrxo" path="res://Assets/end_screen.png" id="2_hsvjp"]
+[ext_resource type="AudioStream" uid="uid://cl867bfr2cb4h" path="res://Audio/kl-peach-game-over-ii-135684.mp3" id="2_t3jgh"]
 
 [node name="MenuGameOver" type="Control"]
 layout_mode = 3
