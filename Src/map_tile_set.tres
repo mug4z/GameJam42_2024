@@ -1,24 +1,23 @@
-[gd_resource type="TileSet" load_steps=39 format=3 uid="uid://ctlmc7n8i6n56"]
+[gd_resource type="TileSet" load_steps=37 format=3 uid="uid://ctlmc7n8i6n56"]
 
-[ext_resource type="Texture2D" uid="uid://ba6amdc6p2d6o" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_y2mta"]
-[ext_resource type="Texture2D" uid="uid://bj7hur7gbc7k3" path="res://Assets/sprite_flower-1.png.png" id="2_qeq5g"]
-[ext_resource type="Texture2D" uid="uid://bpfel6ocitpdq" path="res://Assets/sprite_rock.png" id="3_dqwh8"]
-[ext_resource type="Texture2D" uid="uid://d164l0p4xhv7m" path="res://Assets/Mob/bush_blue.png" id="3_pclni"]
-[ext_resource type="Texture2D" uid="uid://dyoii5h7q7wsq" path="res://Assets/sprite_grass-1.png.png" id="4_252g5"]
-[ext_resource type="Texture2D" uid="uid://dwjywhqcnsrgo" path="res://Assets/Mob/bush_pink.png" id="4_x6mb0"]
-[ext_resource type="Texture2D" uid="uid://cf1stc1byvvf" path="res://Assets/pixel-art-house-export-1.png_2.png" id="5_be6ge"]
-[ext_resource type="Texture2D" uid="uid://8qb0wwugg02g" path="res://Assets/Mob/bush_red.png" id="5_csfgs"]
-[ext_resource type="Texture2D" uid="uid://dgtp4suhxscgw" path="res://Assets/Tree_original_big.png" id="6_3ridb"]
-[ext_resource type="Texture2D" uid="uid://cv36ofpr43dpg" path="res://Assets/Mob/bush_yellow.png" id="6_d65uk"]
-[ext_resource type="Texture2D" uid="uid://7kmjgm5kkqc8" path="res://Assets/sprite_bariiere0.png" id="6_u0uy7"]
-[ext_resource type="Texture2D" uid="uid://cxrtyivfvjpbp" path="res://Assets/Mob/Flower_blue.png" id="7_7n131"]
-[ext_resource type="Texture2D" uid="uid://cplny0bjmihnn" path="res://Assets/sprite_bariiere1.png" id="7_w3duf"]
-[ext_resource type="Texture2D" uid="uid://th76mgbpedbj" path="res://Assets/Mob/Flower_pink.png" id="8_14scx"]
-[ext_resource type="Texture2D" uid="uid://dkgw4wij13up7" path="res://Assets/sprite_bariiere2.png" id="8_q42km"]
-[ext_resource type="Texture2D" uid="uid://ipfa8rk1eebi" path="res://Assets/sprite_bariiere3.png" id="9_7wkp4"]
-[ext_resource type="Texture2D" uid="uid://cclj5trulx23k" path="res://Assets/Mob/Flower_red.png" id="9_rqrtq"]
-[ext_resource type="Texture2D" uid="uid://bce27oxfwhwrt" path="res://Assets/Mob/Flower_yellow.png" id="10_d5vp4"]
-[ext_resource type="Texture2D" uid="uid://sutytocyv6d6" path="res://Assets/Radio.png" id="11_wtufn"]
+[ext_resource type="Texture2D" uid="uid://i60kbt3lrfaj" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_y2mta"]
+[ext_resource type="Texture2D" uid="uid://hlm7dguqvq5f" path="res://Assets/sprite_flower-1.png.png" id="2_qeq5g"]
+[ext_resource type="Texture2D" uid="uid://br6palpm1s7s2" path="res://Assets/sprite_rock.png" id="3_dqwh8"]
+[ext_resource type="Texture2D" uid="uid://gl3smx71jndq" path="res://Assets/Mob/bush_blue.png" id="3_pclni"]
+[ext_resource type="Texture2D" uid="uid://5wqa0kdmip4h" path="res://Assets/sprite_grass-1.png.png" id="4_252g5"]
+[ext_resource type="Texture2D" uid="uid://65mnpsiuwky5" path="res://Assets/Mob/bush_pink.png" id="4_x6mb0"]
+[ext_resource type="Texture2D" uid="uid://d3a05gbr70fsl" path="res://Assets/pixel-art-house-export-1.png_2.png" id="5_be6ge"]
+[ext_resource type="Texture2D" uid="uid://fvbky3ki66cn" path="res://Assets/Mob/bush_red.png" id="5_csfgs"]
+[ext_resource type="Texture2D" uid="uid://bv0or33xmqx6y" path="res://Assets/Tree_original_big.png" id="6_3ridb"]
+[ext_resource type="Texture2D" uid="uid://c7rs3k3kai6t5" path="res://Assets/Mob/bush_yellow.png" id="6_d65uk"]
+[ext_resource type="Texture2D" uid="uid://cw2bwgcqkvlrg" path="res://Assets/sprite_bariiere0.png" id="6_u0uy7"]
+[ext_resource type="Texture2D" uid="uid://bwjppmenmtc64" path="res://Assets/Mob/Flower_blue.png" id="7_7n131"]
+[ext_resource type="Texture2D" uid="uid://c3t036le5kwym" path="res://Assets/sprite_bariiere1.png" id="7_w3duf"]
+[ext_resource type="Texture2D" uid="uid://r4h3l1t867l5" path="res://Assets/Mob/Flower_pink.png" id="8_14scx"]
+[ext_resource type="Texture2D" uid="uid://0kwdacos4si7" path="res://Assets/sprite_bariiere2.png" id="8_q42km"]
+[ext_resource type="Texture2D" uid="uid://cm8hefgwqqup" path="res://Assets/sprite_bariiere3.png" id="9_7wkp4"]
+[ext_resource type="Texture2D" uid="uid://ck5vpeh7r0s8s" path="res://Assets/Mob/Flower_red.png" id="9_rqrtq"]
+[ext_resource type="Texture2D" uid="uid://nbg6ddwff5i5" path="res://Assets/Mob/Flower_yellow.png" id="10_d5vp4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jee1"]
 texture = ExtResource("1_y2mta")
@@ -118,14 +117,6 @@ texture_region_size = Vector2i(96, 96)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qnja6"]
-texture = ExtResource("11_wtufn")
-texture_region_size = Vector2i(128, 128)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, 3, 64, 24.5, -6.25, 64, -69.25, 18.5, -27.25, -43.5)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdfr1"]
 texture = ExtResource("3_dqwh8")
@@ -316,4 +307,3 @@ sources/14 = SubResource("TileSetAtlasSource_7q228")
 sources/15 = SubResource("TileSetAtlasSource_sbi28")
 sources/16 = SubResource("TileSetAtlasSource_dy0hq")
 sources/17 = SubResource("TileSetAtlasSource_v3wes")
-sources/18 = SubResource("TileSetAtlasSource_qnja6")

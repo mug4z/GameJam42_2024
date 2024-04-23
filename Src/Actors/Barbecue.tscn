@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://ccdkev3arec3e"]
 
-[ext_resource type="Texture2D" uid="uid://ba6amdc6p2d6o" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_ixb24"]
+[ext_resource type="Texture2D" uid="uid://i60kbt3lrfaj" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_ixb24"]
 [ext_resource type="Script" path="res://Src/Scripts/Npc1.gd" id="2_xb3ng"]
 [ext_resource type="Script" path="res://Src/Scripts/Npc2.gd" id="3_hkkpt"]
 [ext_resource type="Script" path="res://Src/Scripts/Npc3.gd" id="4_nkdh0"]
@@ -8,8 +8,8 @@
 [ext_resource type="Script" path="res://Src/Scripts/Npc5.gd" id="6_1wy5h"]
 [ext_resource type="Script" path="res://Src/Scripts/Npc6.gd" id="7_bd8nw"]
 [ext_resource type="Script" path="res://Src/Scripts/UpgradeLabel.gd" id="8_m2685"]
-[ext_resource type="Texture2D" uid="uid://bdijf6k6tixkp" path="res://Assets/spark.png" id="9_fq8qr"]
-[ext_resource type="AudioStream" uid="uid://baorpi2wrnshm" path="res://Audio/firecrackle.mp3" id="10_mnpl8"]
+[ext_resource type="Texture2D" uid="uid://dmtnn75otv8oc" path="res://Assets/spark.png" id="9_fq8qr"]
+[ext_resource type="AudioStream" uid="uid://iqvvb71r3pdi" path="res://Audio/firecrackle.mp3" id="10_mnpl8"]
 [ext_resource type="Script" path="res://Src/Scripts/hitbox_barbuc.gd" id="11_t12g2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vp8bo"]
@@ -96,7 +96,7 @@ rotation = 0.0151572
 shape = SubResource("CapsuleShape2D_vp8bo")
 
 [node name="LabelPoint" type="Node2D" parent="NPC1"]
-position = Vector2(-134, 25)
+position = Vector2(-201, 15)
 
 [node name="NPC2" type="Area2D" parent="."]
 light_mask = 16
@@ -105,7 +105,7 @@ collision_layer = 0
 script = ExtResource("3_hkkpt")
 
 [node name="LabelPoint" type="Node2D" parent="NPC2"]
-position = Vector2(-109, -87)
+position = Vector2(-113, -89)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC2"]
 position = Vector2(-175, -176)
@@ -185,10 +185,8 @@ shape = SubResource("CircleShape2D_bm2xs")
 
 [node name="UpgradeLabel" type="Label" parent="."]
 z_index = 14
-offset_left = -281.0
-offset_top = -325.0
-offset_right = -191.0
-offset_bottom = -276.0
+offset_right = 71.0
+offset_bottom = 41.0
 scale = Vector2(1.91, 1.91)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)

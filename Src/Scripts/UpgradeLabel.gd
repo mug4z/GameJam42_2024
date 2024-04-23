@@ -17,7 +17,6 @@ func my_set_offset():
 	pivot_offset.x = size.x
 	pivot_offset.y = size.y
 
-
 func _process(delta):
 	absolute_time += delta
 	global_position = Vector2(base_position.x, base_position.y + ( amplitude * sin(speed * absolute_time) ))

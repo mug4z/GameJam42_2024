@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://b0x764ttwp484"]
 
-[ext_resource type="Texture2D" uid="uid://bq13a5u3f6f7p" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_478pc"]
+[ext_resource type="Texture2D" uid="uid://i60kbt3lrfaj" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_478pc"]
 [ext_resource type="Script" path="res://Src/Scripts/Npc1.gd" id="2_uow0n"]
 [ext_resource type="Script" path="res://Src/Scripts/UpgradeLabel.gd" id="3_mn224"]
 [ext_resource type="Script" path="res://Src/Scripts/Npc2.gd" id="3_u1agl"]
@@ -49,7 +49,6 @@ visibility_layer = 32
 texture = ExtResource("1_478pc")
 
 [node name="NPC1" type="Area2D" parent="."]
-visible = false
 light_mask = 16
 visibility_layer = 16
 collision_layer = 0
@@ -66,7 +65,6 @@ shape = SubResource("CapsuleShape2D_vp8bo")
 position = Vector2(-220, 46)
 
 [node name="NPC2" type="Area2D" parent="."]
-visible = false
 light_mask = 16
 visibility_layer = 16
 collision_layer = 0
@@ -81,7 +79,6 @@ rotation = 2.30638
 shape = SubResource("CapsuleShape2D_8hdkt")
 
 [node name="NPC3" type="Area2D" parent="."]
-visible = false
 light_mask = 16
 visibility_layer = 16
 collision_layer = 0
@@ -98,7 +95,6 @@ rotation = 0.0194485
 shape = SubResource("CapsuleShape2D_beqvs")
 
 [node name="NPC4" type="Area2D" parent="."]
-visible = false
 light_mask = 16
 visibility_layer = 16
 collision_layer = 0
@@ -115,7 +111,6 @@ rotation = 3.89831
 shape = SubResource("CapsuleShape2D_6wq2d")
 
 [node name="NPC5" type="Area2D" parent="."]
-visible = false
 light_mask = 16
 visibility_layer = 16
 collision_layer = 0
@@ -130,7 +125,6 @@ rotation = 4.71532
 shape = SubResource("CapsuleShape2D_dbjlw")
 
 [node name="NPC6" type="Area2D" parent="."]
-visible = false
 light_mask = 16
 visibility_layer = 16
 collision_layer = 0
