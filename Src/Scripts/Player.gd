@@ -34,7 +34,7 @@ signal update_xp # to emit signal on xp quantity change. xp UI recieves and auto
 var xp = 0
 var level = 1
 var xp_to_next_level = 1
-var upgrade_points = 100
+var upgrade_points = 0
 
 var time_since_fired = 0
 var attack_timer = 0
