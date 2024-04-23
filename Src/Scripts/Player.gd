@@ -88,7 +88,7 @@ func fire(delta):
 	if (fuel < max_fuel):
 		if(!Input.is_action_pressed("Fire")):
 			time_since_fired += delta
-			fuel += delta * recharge_speed + (time_since_fired * recharge_speed / 3)
+			fuel += delta * recharge_speed + (time_since_fired * recharge_speed / 5)
 			update_fuel.emit()
 
 func upgrade(stat):
