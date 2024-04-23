@@ -1,19 +1,20 @@
 [gd_scene load_steps=13 format=3 uid="uid://cv16f54leb6w0"]
 
 [ext_resource type="PackedScene" uid="uid://bi26bo7k041yx" path="res://Src/GUI/hud.tscn" id="1_jblu7"]
+[ext_resource type="Script" path="res://Src/Actors/mobs.gd" id="1_lfhag"]
 [ext_resource type="TileSet" uid="uid://ctlmc7n8i6n56" path="res://Src/map_tile_set.tres" id="2_1pku4"]
 [ext_resource type="PackedScene" uid="uid://cuf2linjho7gy" path="res://Src/Actors/Player.tscn" id="4_c6r1m"]
-[ext_resource type="AudioStream" uid="uid://cdwh45105btn" path="res://Audio/8-bit-game-158815.mp3" id="6_m7ut3"]
+[ext_resource type="AudioStream" uid="uid://yr2ixndfr4l7" path="res://Audio/8-bit-game-158815.mp3" id="6_m7ut3"]
 [ext_resource type="Script" path="res://Src/Scripts/Track1.gd" id="7_jrd1p"]
-[ext_resource type="AudioStream" uid="uid://b0p3hvpdfvlfv" path="res://Audio/8-bit-arcade-mode-158814.mp3" id="8_pe6d3"]
+[ext_resource type="AudioStream" uid="uid://btcwjci0eb5m8" path="res://Audio/8-bit-arcade-mode-158814.mp3" id="8_pe6d3"]
 [ext_resource type="Script" path="res://Src/Scripts/Track2.gd" id="9_t1fwi"]
-[ext_resource type="AudioStream" uid="uid://bdclqslaeh6wq" path="res://Audio/8-bit-air-fight-158813.mp3" id="10_3cato"]
+[ext_resource type="AudioStream" uid="uid://cpuapeje8fjpy" path="res://Audio/8-bit-air-fight-158813.mp3" id="10_3cato"]
 [ext_resource type="Script" path="res://Src/Scripts/Track3.gd" id="11_354ko"]
-[ext_resource type="Script" path="res://Src/Scripts/spawner.gd" id="11_po0on"]
 [ext_resource type="PackedScene" uid="uid://u0e6ptehug1s" path="res://Src/Actors/boombox.tscn" id="12_qr3mt"]
 [ext_resource type="PackedScene" uid="uid://ccdkev3arec3e" path="res://Src/Actors/Barbecue.tscn" id="12_utles"]
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_lfhag")
 
 [node name="Player" parent="." instance=ExtResource("4_c6r1m")]
 z_index = 3
@@ -64,9 +65,6 @@ volume_db = 5.0
 max_distance = 4420.0
 attenuation = 0.926
 script = ExtResource("11_354ko")
-
-[node name="spwan" type="Node" parent="."]
-script = ExtResource("11_po0on")
 
 [node name="BBQ" parent="." instance=ExtResource("12_utles")]
 

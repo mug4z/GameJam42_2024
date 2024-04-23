@@ -1,6 +1,5 @@
 extends Area2D
 
-var mob_instance = [preload("res://Src/Actors/mob1.tscn"), preload("res://Src/Actors/mob2.tscn"), preload("res://Src/Actors/mob3.tscn")]
 
 var center_position = Vector2(0,0)
 
@@ -28,8 +27,6 @@ func _physics_process(_delta):
 	pass
 func propagate():
 	if (density < max_density && Tier > 2):
-		var new_sprite = mob_instance[randi_range(0,1)].instantiate()
-		add_sibling(new_sprite)  # Adding as a sibling to maintain same parent
 		var current_global_position = global_position  # Use global position
 		# Calculate direction from current global position to the global center
 		var direction = (center_position - current_global_position).normalized()
@@ -37,7 +34,8 @@ func propagate():
 		var random_angle = deg_to_rad(randi_range(-90,90))  # Random angle between -22.5 to +22.5 degrees
 		direction = direction.rotated(random_angle)
 		var random_distance = base_distance * randf_range(0.8, 1.4)  # Randomize distance by 20%
-		new_sprite.global_position = current_global_position + direction * random_distance
+		var positionn = current_global_position + direction * random_distance
+		get_parent().spawnn(1, positionn)
 		
 
 func _on_timer_timeout():

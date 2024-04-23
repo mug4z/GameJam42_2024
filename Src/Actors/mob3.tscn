@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dwvrbuyn37oh5"]
 
 [ext_resource type="Script" path="res://Src/Scripts/Mob3.gd" id="1_rm8g8"]
-[ext_resource type="Texture2D" uid="uid://bx6hi6oav1oug" path="res://Assets/Tree_original_big.png" id="2_y8v70"]
+[ext_resource type="Texture2D" uid="uid://bwiqb43eldrbm" path="res://Assets/Tree_original_big.png" id="2_y8v70"]
 [ext_resource type="Script" path="res://Src/Scripts/Sprite_3.gd" id="3_bur5a"]
 [ext_resource type="Script" path="res://Src/Scripts/Timer_3.gd" id="3_vu6ce"]
 
