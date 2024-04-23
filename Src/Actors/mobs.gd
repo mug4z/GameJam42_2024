@@ -3,7 +3,7 @@ extends Node2D
 var mob_instance = [preload("res://Src/Actors/mob1.tscn"), preload("res://Src/Actors/mob2.tscn"), preload("res://Src/Actors/mob3.tscn")]
 var center_x = 0  # Center x-coordinate
 var center_y = 0  # Center y-coordinate
-var radius = 4000  # Radius of the circle
+var radius = 3000  # Radius of the circle
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://cuf2linjho7gy"]
 
 [ext_resource type="Script" path="res://Src/Scripts/Player.gd" id="1_e52wl"]
-[ext_resource type="Texture2D" uid="uid://blow48ibb00cs" path="res://Assets/player_sprite-1.png.png" id="2_rpy67"]
-[ext_resource type="AudioStream" uid="uid://dseqmblabdu5l" path="res://Audio/upgrade.mp3" id="3_fctws"]
-[ext_resource type="AudioStream" uid="uid://cnjmvlh36dqkp" path="res://Audio/flamethrower.mp3" id="4_sw1f5"]
+[ext_resource type="Texture2D" uid="uid://cgk0glrdf2gux" path="res://Assets/player_sprite-1.png.png" id="2_rpy67"]
+[ext_resource type="AudioStream" uid="uid://cspeda01kxv4e" path="res://Audio/upgrade.mp3" id="3_fctws"]
+[ext_resource type="AudioStream" uid="uid://r102bmcgp3iu" path="res://Audio/flamethrower.mp3" id="4_sw1f5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y0ucb"]
 radius = 27.0
