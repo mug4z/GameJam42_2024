@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var max_fuel = 70
+@export var max_fuel = 10
 var fuel = max_fuel
-#var	fuel_growth = 5
+var max_fuel_growth = 10
 
 @export var recharge_speed = 1.7
 var recharge_speed_growth = 1
@@ -31,16 +31,16 @@ signal update_xp # to emit signal on xp quantity change. xp UI recieves and auto
 var xp = 0
 var level = 1
 var xp_to_next_level = 15 * level
-var upgrade_points = 7
+var upgrade_points = 10
 
+var time_since_fired = 0
 var attack_timer = 0
-var recharge_timer = 0
 var mouse_direction
  
 func _init():
 	pass
 func _ready():
-	pass
+	update_xp.emit()
 
 func _process(delta):
 	mouse_direction = global_position.direction_to(get_global_mouse_position())
@@ -71,7 +71,7 @@ func fire(delta):
 	else:
 		if ($BUUURN.playing):
 			$BUUURN.stop()
-	if (Input.is_action_pressed("Fire") && fuel > 0 && attack_timer >= (1.0/attack_speed)):
+	if (Input.is_action_pressed("Fire") && fuel >= 1 && attack_timer >= (1.0/attack_speed)):
 		var new_flame = flame.instantiate()
 		new_flame.rotation = mouse_direction.angle() + deg_to_rad(180)
 		new_flame.global_position = $FirePoint.global_position
@@ -82,14 +82,14 @@ func fire(delta):
 		fuel -= 1
 		update_fuel.emit()
 		attack_timer = 0
+		time_since_fired = 0
 	else:
 		attack_timer += delta
-	recharge_timer += delta
-	if (recharge_timer >= (1.0/recharge_speed) && fuel < max_fuel):
+	if (fuel < max_fuel):
 		if(!Input.is_action_pressed("Fire")):
-			fuel += 1 + (float(fuel)/ float(max_fuel) * 3)
+			time_since_fired += delta
+			fuel += delta * recharge_speed + (time_since_fired * recharge_speed / 3)
 			update_fuel.emit()
-		recharge_timer = 0
 
 func upgrade(stat):
 	if upgrade_points > 0 :
@@ -102,11 +102,10 @@ func upgrade(stat):
 			move_speed += float(move_speed_growth) / float(move_speed * 0.3)
 		if (stat == "attack_speed"):
 			attack_speed += attack_speed_growth
-			max_fuel *= 1.10			
 		if (stat == "fire_speed"):
 			fire_speed += fire_speed_growth
-		if (stat == "spread"):
-			spread += spread_growth
+		if (stat == "max_fuel"):
+			max_fuel += max_fuel_growth
 		if (stat == "fire_scale"):
 			fire_scale += (fire_scale_growth * 0.10) / fire_scale
 
