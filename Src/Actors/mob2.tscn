@@ -1,13 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://2bnfcfxxdb7s"]
+[gd_scene load_steps=7 format=3 uid="uid://2bnfcfxxdb7s"]
 
 [ext_resource type="Script" path="res://Src/Scripts/Mob2.gd" id="1_ii5bu"]
-[ext_resource type="Texture2D" uid="uid://bh5qejaol8vy2" path="res://Assets/Mob/bush_pink.png" id="2_18xb6"]
+[ext_resource type="Texture2D" uid="uid://d1eihwvnpjw6i" path="res://Assets/Mob/bush_pink.png" id="2_18xb6"]
 [ext_resource type="Script" path="res://Src/Scripts/Sprite_2.gd" id="3_blepa"]
 [ext_resource type="Script" path="res://Src/Actors/timer_T2.gd" id="4_4a2ov"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6elh3"]
 radius = 68.0
 height = 152.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aatnq"]
+size = Vector2(71, 35.5)
 
 [node name="Mob_3" type="Area2D"]
 z_index = 5
@@ -32,6 +35,13 @@ shape = SubResource("CapsuleShape2D_6elh3")
 wait_time = 7.0
 autostart = true
 script = ExtResource("4_4a2ov")
+
+[node name="ObstacleBox" type="StaticBody2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleBox"]
+position = Vector2(0, -61)
+shape = SubResource("RectangleShape2D_aatnq")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

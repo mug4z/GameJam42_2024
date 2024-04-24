@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://u0e6ptehug1s"]
 
-[ext_resource type="Texture2D" uid="uid://bmenbktmadxya" path="res://Assets/Radio.png" id="1_5uhm0"]
-[ext_resource type="Texture2D" uid="uid://c255sxcelxx2h" path="res://Assets/note2.png" id="2_uxgs0"]
-[ext_resource type="Texture2D" uid="uid://2nohotrlovtp" path="res://Assets/note1.png" id="3_6ibr8"]
+[ext_resource type="Texture2D" uid="uid://b27k2w0tlyj3a" path="res://Assets/Radio.png" id="1_5uhm0"]
+[ext_resource type="Texture2D" uid="uid://d2fshkmikr557" path="res://Assets/note2.png" id="2_uxgs0"]
+[ext_resource type="Texture2D" uid="uid://26pyxktbr5t4" path="res://Assets/note1.png" id="3_6ibr8"]
 [ext_resource type="Script" path="res://Src/Scripts/BoomBox.gd" id="4_7yj82"]
 [ext_resource type="Script" path="res://Src/Scripts/UpgradeLabel.gd" id="5_pjg7q"]
 

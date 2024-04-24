@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dwvrbuyn37oh5"]
+[gd_scene load_steps=9 format=3 uid="uid://dwvrbuyn37oh5"]
 
 [ext_resource type="Script" path="res://Src/Scripts/Mob3.gd" id="1_rm8g8"]
-[ext_resource type="Texture2D" uid="uid://bwiqb43eldrbm" path="res://Assets/Tree_original_big.png" id="2_y8v70"]
+[ext_resource type="Texture2D" uid="uid://cn6bcjftn3dbw" path="res://Assets/Tree_original_big.png" id="2_y8v70"]
 [ext_resource type="Script" path="res://Src/Scripts/Sprite_3.gd" id="3_bur5a"]
 [ext_resource type="Script" path="res://Src/Scripts/Timer_3.gd" id="3_vu6ce"]
 
@@ -39,6 +39,9 @@ animations = [{
 "name": &"T3",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqsky"]
+size = Vector2(69, 39)
 
 [node name="Mob_3" type="Area2D"]
 z_index = 5
@@ -80,5 +83,12 @@ animation = &"T1_1"
 
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 5.0
+
+[node name="ObstacleBox" type="StaticBody2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleBox"]
+position = Vector2(-1, 36)
+shape = SubResource("RectangleShape2D_rqsky")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
