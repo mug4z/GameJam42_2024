@@ -1,12 +1,104 @@
-[gd_scene load_steps=6 format=3 uid="uid://cuf2linjho7gy"]
+[gd_scene load_steps=19 format=3 uid="uid://cuf2linjho7gy"]
 
 [ext_resource type="Script" path="res://Src/Scripts/Player.gd" id="1_e52wl"]
-[ext_resource type="Texture2D" uid="uid://cgk0glrdf2gux" path="res://Assets/player_sprite-1.png.png" id="2_rpy67"]
-[ext_resource type="AudioStream" uid="uid://cspeda01kxv4e" path="res://Audio/upgrade.mp3" id="3_fctws"]
-[ext_resource type="AudioStream" uid="uid://r102bmcgp3iu" path="res://Audio/flamethrower.mp3" id="4_sw1f5"]
+[ext_resource type="Texture2D" uid="uid://bnf21mcnqnawm" path="res://Assets/player_sprite.png" id="2_fhy58"]
+[ext_resource type="AudioStream" uid="uid://dqlor4kgd83a4" path="res://Audio/upgrade.mp3" id="3_fctws"]
+[ext_resource type="AudioStream" uid="uid://luoca8swylui" path="res://Audio/flamethrower.mp3" id="4_sw1f5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgylt"]
+atlas = ExtResource("2_fhy58")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e31yr"]
+atlas = ExtResource("2_fhy58")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4urrr"]
+atlas = ExtResource("2_fhy58")
+region = Rect2(1280, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1q23e"]
+atlas = ExtResource("2_fhy58")
+region = Rect2(0, 640, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amans"]
+atlas = ExtResource("2_fhy58")
+region = Rect2(640, 640, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6d5nq"]
+atlas = ExtResource("2_fhy58")
+region = Rect2(1280, 640, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enhnq"]
+atlas = ExtResource("2_fhy58")
+region = Rect2(0, 1280, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymq1q"]
+atlas = ExtResource("2_fhy58")
+region = Rect2(640, 1280, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1fe1"]
+atlas = ExtResource("2_fhy58")
+region = Rect2(1280, 1280, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uay60"]
+atlas = ExtResource("2_fhy58")
+region = Rect2(0, 1920, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rqii"]
+atlas = ExtResource("2_fhy58")
+region = Rect2(640, 1920, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sw1y7"]
+atlas = ExtResource("2_fhy58")
+region = Rect2(1280, 1920, 640, 640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e50ym"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgylt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e31yr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4urrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1q23e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amans")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6d5nq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enhnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymq1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1fe1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uay60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rqii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sw1y7")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 4.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y0ucb"]
-radius = 27.0
+radius = 30.0
 height = 81.0
 
 [node name="Player" type="CharacterBody2D"]
@@ -19,12 +111,16 @@ script = ExtResource("1_e52wl")
 [node name="FirePoint" type="Node2D" parent="."]
 position = Vector2(0.1, 54.86)
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 1)
-texture = ExtResource("2_rpy67")
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_e50ym")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.540197
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(-2, -8.5)
+position = Vector2(-3, -8.5)
 shape = SubResource("CapsuleShape2D_y0ucb")
 
 [node name="UPGRADE" type="AudioStreamPlayer2D" parent="."]
