@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b1uxsah2njw0a"]
 
-[ext_resource type="Texture2D" uid="uid://dlyclvtx75hh1" path="res://Assets/Mainmenu.png" id="1_8akuq"]
-[ext_resource type="AudioStream" uid="uid://c2kvyel28wi30" path="res://Audio/happy.mp3" id="2_khbly"]
+[ext_resource type="Texture2D" uid="uid://boxy7rg4repun" path="res://Assets/Mainmenu.png" id="1_8akuq"]
+[ext_resource type="AudioStream" uid="uid://bfadgd7ea207t" path="res://Audio/happy.mp3" id="2_khbly"]
 [ext_resource type="Script" path="res://Src/Scripts/StartGameButton.gd" id="3_0ueem"]
 [ext_resource type="Script" path="res://Src/Scripts/CreditsButton.gd" id="4_1wvw1"]
 

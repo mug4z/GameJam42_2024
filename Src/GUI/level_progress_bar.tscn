@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ecxhkqv5kd2s"]
 
-[ext_resource type="Texture2D" uid="uid://bic1brnpvlnit" path="res://Assets/levelbar_back.png" id="1_8d1y6"]
-[ext_resource type="Texture2D" uid="uid://cc0xt6viymk5q" path="res://Assets/levelbar_progress.png" id="2_8g76q"]
+[ext_resource type="Texture2D" uid="uid://b36uw5ax1kyw2" path="res://Assets/levelbar_back.png" id="1_8d1y6"]
+[ext_resource type="Texture2D" uid="uid://ekxwmnmr6tdt" path="res://Assets/levelbar_progress.png" id="2_8g76q"]
 [ext_resource type="Script" path="res://Src/Scripts/LevelProgressBar.gd" id="3_ni82l"]
 
 [node name="LevelProgressBar" type="Node2D"]
