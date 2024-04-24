@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=37 format=3 uid="uid://ctlmc7n8i6n56"]
+[gd_resource type="TileSet" load_steps=29 format=3 uid="uid://ctlmc7n8i6n56"]
 
 [ext_resource type="Texture2D" uid="uid://vq7tm5rvswh8" path="res://Assets/DALLE_2024-04-20_00.52-1.png (2).png" id="1_y2mta"]
 [ext_resource type="Texture2D" uid="uid://bt8out02kb8b8" path="res://Assets/sprite_flower-1.png.png" id="2_qeq5g"]
@@ -10,12 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://bepe0piaa0l2a" path="res://Assets/Mob/bush_red.png" id="5_csfgs"]
 [ext_resource type="Texture2D" uid="uid://cn6bcjftn3dbw" path="res://Assets/Tree_original_big.png" id="6_3ridb"]
 [ext_resource type="Texture2D" uid="uid://bn8368uh6ywxs" path="res://Assets/Mob/bush_yellow.png" id="6_d65uk"]
-[ext_resource type="Texture2D" uid="uid://bxrunk4hkmfrv" path="res://Assets/sprite_bariiere0.png" id="6_u0uy7"]
 [ext_resource type="Texture2D" uid="uid://b5c4r478smw5q" path="res://Assets/Mob/Flower_blue.png" id="7_7n131"]
-[ext_resource type="Texture2D" uid="uid://bmokwlog82tri" path="res://Assets/sprite_bariiere1.png" id="7_w3duf"]
 [ext_resource type="Texture2D" uid="uid://c650jprixugr4" path="res://Assets/Mob/Flower_pink.png" id="8_14scx"]
-[ext_resource type="Texture2D" uid="uid://cc1kiyaw7bkwl" path="res://Assets/sprite_bariiere2.png" id="8_q42km"]
-[ext_resource type="Texture2D" uid="uid://lgw1dipjjvag" path="res://Assets/sprite_bariiere3.png" id="9_7wkp4"]
 [ext_resource type="Texture2D" uid="uid://cxoayujqr8gxi" path="res://Assets/Mob/Flower_red.png" id="9_rqrtq"]
 [ext_resource type="Texture2D" uid="uid://bjlekpahysoxw" path="res://Assets/Mob/Flower_yellow.png" id="10_d5vp4"]
 
@@ -258,34 +254,6 @@ texture_region_size = Vector2i(128, 128)
 3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:4/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pvcfd"]
-texture = ExtResource("6_u0uy7")
-texture_region_size = Vector2i(128, 128)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ekrg6"]
-texture = ExtResource("7_w3duf")
-texture_region_size = Vector2i(128, 128)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mg8we"]
-texture = ExtResource("8_q42km")
-texture_region_size = Vector2i(128, 128)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qbu0t"]
-texture = ExtResource("9_7wkp4")
-texture_region_size = Vector2i(128, 128)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-
 [resource]
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 8
@@ -294,10 +262,6 @@ sources/1 = SubResource("TileSetAtlasSource_7fw5c")
 sources/2 = SubResource("TileSetAtlasSource_vdfr1")
 sources/3 = SubResource("TileSetAtlasSource_wsnia")
 sources/4 = SubResource("TileSetAtlasSource_uw4fj")
-sources/6 = SubResource("TileSetAtlasSource_pvcfd")
-sources/7 = SubResource("TileSetAtlasSource_ekrg6")
-sources/8 = SubResource("TileSetAtlasSource_mg8we")
-sources/9 = SubResource("TileSetAtlasSource_qbu0t")
 sources/5 = SubResource("TileSetAtlasSource_qlb27")
 sources/10 = SubResource("TileSetAtlasSource_kkjs3")
 sources/11 = SubResource("TileSetAtlasSource_1r88r")

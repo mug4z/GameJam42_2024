@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cv16f54leb6w0"]
+[gd_scene load_steps=14 format=3 uid="uid://cv16f54leb6w0"]
 
 [ext_resource type="PackedScene" uid="uid://bi26bo7k041yx" path="res://Src/GUI/hud.tscn" id="1_jblu7"]
 [ext_resource type="Script" path="res://Src/Actors/mobs.gd" id="1_lfhag"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Src/Scripts/Track3.gd" id="11_354ko"]
 [ext_resource type="PackedScene" uid="uid://u0e6ptehug1s" path="res://Src/Actors/boombox.tscn" id="12_qr3mt"]
 [ext_resource type="PackedScene" uid="uid://ccdkev3arec3e" path="res://Src/Actors/Barbecue.tscn" id="12_utles"]
+[ext_resource type="PackedScene" uid="uid://bd8xte2rx1hi2" path="res://Src/Actors/sign_1.tscn" id="13_he3cv"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_lfhag")
@@ -45,31 +46,36 @@ layer_3/tile_data = PackedInt32Array(-982985, 10, 0, -1114061, 10, 0, -851923, 1
 
 [node name="Track1" type="AudioStreamPlayer2D" parent="BackgroundMusic"]
 stream = ExtResource("6_m7ut3")
-volume_db = 5.0
+volume_db = 4.3
 autoplay = true
 max_distance = 4420.0
-attenuation = 0.926836
+attenuation = 0.463414
+panning_strength = 0.0
 script = ExtResource("7_jrd1p")
 
 [node name="Track2" type="AudioStreamPlayer2D" parent="BackgroundMusic"]
 stream = ExtResource("8_pe6d3")
-volume_db = 5.0
+volume_db = 4.3
 max_distance = 4420.0
-attenuation = 0.926
+attenuation = 0.463414
+panning_strength = 0.0
 script = ExtResource("9_t1fwi")
 
 [node name="Track3" type="AudioStreamPlayer2D" parent="BackgroundMusic"]
-position = Vector2(93, -187)
 stream = ExtResource("10_3cato")
-volume_db = 5.0
+volume_db = 4.3
 max_distance = 4420.0
-attenuation = 0.926
+attenuation = 0.463414
+panning_strength = 0.0
 script = ExtResource("11_354ko")
 
 [node name="BBQ" parent="." instance=ExtResource("12_utles")]
 
 [node name="Boombox" parent="." instance=ExtResource("12_qr3mt")]
-position = Vector2(622, -500)
+position = Vector2(-3050, -2346)
+
+[node name="Sign1" parent="." instance=ExtResource("13_he3cv")]
+position = Vector2(-564, -617)
 
 [connection signal="finished" from="BackgroundMusic/Track1" to="BackgroundMusic/Track1" method="_on_finished"]
 [connection signal="finished" from="BackgroundMusic/Track2" to="BackgroundMusic/Track2" method="_on_finished"]

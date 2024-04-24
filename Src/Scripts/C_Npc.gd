@@ -26,10 +26,13 @@ func _process(delta):
 		threshold_timer += delta
 
 func _on_body_entered(body):
-	label.text = "Upgrade " + stat_text + "\nPrice: " + str(cost)
+	update_label_text()
 	label.set_base_position($LabelPoint.global_position)
 	label.visible = 1
 	can_interact = 1
+	
+func update_label_text():
+	label.text = "Upgrade " + stat_text + "\nPrice: " + str(cost)
 
 func _on_body_exited(body):
 	get_parent().get_node("UpgradeLabel").visible = 0

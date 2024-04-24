@@ -9,3 +9,4 @@ func _ready():
 func Interact_action(player):
 	if (player.upgrade(stat, cost)):
 		cost += cost
+		update_label_text()

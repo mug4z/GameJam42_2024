@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" load_steps=10 format=3 uid="uid://b8gy3qgoaa85"]
 
-[ext_resource type="Texture2D" uid="uid://bu7x8wep81gqn" path="res://Assets/grass.png" id="1_hlb4p"]
-[ext_resource type="Texture2D" uid="uid://hlm7dguqvq5f" path="res://Assets/sprite_flower-1.png.png" id="2_06qvl"]
-[ext_resource type="Texture2D" uid="uid://5wqa0kdmip4h" path="res://Assets/sprite_grass-1.png.png" id="3_aushi"]
-[ext_resource type="Texture2D" uid="uid://br6palpm1s7s2" path="res://Assets/sprite_rock.png" id="4_iw2p6"]
+[ext_resource type="Texture2D" uid="uid://ctuii7svg1xso" path="res://Assets/grass.png" id="1_hlb4p"]
+[ext_resource type="Texture2D" uid="uid://bt8out02kb8b8" path="res://Assets/sprite_flower-1.png.png" id="2_06qvl"]
+[ext_resource type="Texture2D" uid="uid://0cwbdlq5hroa" path="res://Assets/sprite_grass-1.png.png" id="3_aushi"]
+[ext_resource type="Texture2D" uid="uid://dvo7p5o1if6mm" path="res://Assets/sprite_rock.png" id="4_iw2p6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xv7d2"]
 1:1/0 = 0
