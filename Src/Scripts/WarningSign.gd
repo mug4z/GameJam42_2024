@@ -4,7 +4,7 @@ var InterestPoint
 var Player
 var direction = Vector2.ZERO
 
-var arrow_distance = 50
+var arrow_distance = 75
 
 var max_distance_from_center = 350
 var min_distance_from_center = 300
@@ -39,5 +39,9 @@ func _physics_process(delta):
 	if (player_distance_from_point >= min_distance_from_center &&
 		InterestPoint.get_node("DangerZone").in_danger):
 		visible = 1
+		if (!$Alert.playing):
+			$Alert.play()
 	else:
 		visible = 0
+		if (!$Alert.playing):
+			$Alert.stop()

@@ -123,7 +123,7 @@ func exp(exp):
 	xp += exp
 	if xp >= xp_to_next_level:
 		level += 1
-		xp_to_next_level = (level/10)^5
+		xp_to_next_level = clamp((level/10)^5, 0, INF)
 		upgrade_points += 1
 		xp = 0
 

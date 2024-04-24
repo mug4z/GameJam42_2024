@@ -10,12 +10,12 @@ func _ready():
 	var num_sprites = 10  # Number of sprites to place in a circle
 	for i in range(0, num_sprites):
 		var angle = 2 * PI * i / num_sprites  # Calculate the angle for each sprite
-		var positionn = Vector2(center_x + radius * cos(angle), center_y + radius * sin(angle)) * randf_range(0.95,1.05)
-		spawnn(2, positionn)
+		var position = Vector2(center_x + radius * cos(angle), center_y + radius * sin(angle)) * randf_range(0.95,1.05)
+		spawnn(2, position)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-func spawnn(tier, positionn):
+func spawnn(tier, position):
 	var new_sprite = mob_instance[tier].instantiate()
 	add_child(new_sprite)  # Adding as a sibling to maintain same parent
-	new_sprite.global_position = positionn
+	new_sprite.global_position = position

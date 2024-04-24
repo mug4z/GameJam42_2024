@@ -34,7 +34,7 @@ func propagate():
 		direction = direction.rotated(random_angle)
 		var random_distance = base_distance * randf_range(0.8, 1.4)  # Randomize distance by 20%
 		var positionn = current_global_position + direction * random_distance
-		get_parent().spawnn(1, positionn)
+		get_parent().spawnn(0, positionn)
 		
 
 func _on_timer_timeout():
